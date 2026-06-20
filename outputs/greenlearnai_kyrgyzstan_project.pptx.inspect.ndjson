@@ -1,0 +1,326 @@
+{"kind":"deck","id":"pr/du295e","name":"Deck"}
+{"kind":"layout","layoutId":"c64fa1cc-2881-4643-83b8-52ffe573bd34","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"19e7859c-8800-41f9-93c5-d2bbf9c62188","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/jccvy9","slide":1,"title":"GREENLEARNAI","textShapes":9}
+{"kind":"shape","id":"sh/6dcbulwv","slide":1,"bbox":[850,-120,520,520]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":1,"bbox":[760,360,360,360]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":1,"text":"GREENLEARNAI","textPreview":"GREENLEARNAI","textChars":12,"textLines":1,"bbox":[74,60,280,28]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":1,"text":"GreenLearnAI","textPreview":"GreenLearnAI","textChars":12,"textLines":1,"bbox":[72,150,690,78]}
+{"kind":"textbox","id":"sh/61032lsz","slide":1,"text":"AI-платформа, которая превращает обучение, экологию и добрые дела в игру с реальными наградами","textPreview":"AI-платформа, которая превращает обучение, экологию и добрые дела в игру с реальными наградами","textChars":94,"textLines":1,"bbox":[76,250,680,112]}
+{"kind":"shape","id":"sh/dsji5sne","slide":1,"bbox":[78,410,126,34]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":1,"text":"учись","textPreview":"учись","textChars":5,"textLines":1,"bbox":[92,417,98,20]}
+{"kind":"shape","id":"sh/vahoza1g","slide":1,"bbox":[220,410,178,34]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":1,"text":"делай добро","textPreview":"делай добро","textChars":11,"textLines":1,"bbox":[234,417,150,20]}
+{"kind":"shape","id":"sh/c3ylc7u5","slide":1,"bbox":[414,410,158,34]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":1,"text":"меняй мир","textPreview":"меняй мир","textChars":9,"textLines":1,"bbox":[428,417,130,20]}
+{"kind":"shape","id":"sh/uxc3ylc7","slide":1,"bbox":[828,148,330,330]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":1,"text":"KG","textPreview":"KG","textChars":2,"textLines":1,"bbox":[898,194,190,88]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":1,"text":"школы • семьи • бренды\nреальные действия\nGreenPoints","textPreview":"школы • семьи • бренды | реальные действия | GreenPoints","textChars":52,"textLines":3,"bbox":[868,305,250,112]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":1,"text":"Презентация проекта","textPreview":"Презентация проекта","textChars":19,"textLines":1,"bbox":[76,648,360,24]}
+{"kind":"notes","id":"nt/jccvy9","slide":1,"text":""}
+{"kind":"slide","id":"sl/495hyz","slide":2,"title":"GREENLEARNAI","textShapes":14}
+{"kind":"textbox","id":"sh/58z25kb6","slide":2,"name":"eyebrow-2","text":"GREENLEARNAI","textPreview":"GREENLEARNAI","textChars":12,"textLines":1,"bbox":[64,28,220,24]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":2,"name":"title-2","text":"Кыргызстан через 10 лет","textPreview":"Кыргызстан через 10 лет","textChars":23,"textLines":1,"bbox":[64,72,790,86]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":2,"name":"subtitle-2","text":"Каждая школа отвечает за свой район, каждый класс — за свою улицу, каждый ребёнок — за свой вклад.","textPreview":"Каждая школа отвечает за свой район, каждый класс — за свою улицу, каждый ребёнок — за свой вклад.","textChars":98,"textLines":1,"bbox":[64,154,820,46]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1168,30,48,24]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":2,"bbox":[92,260,250,132]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":2,"text":"школа","textPreview":"школа","textChars":5,"textLines":1,"bbox":[114,282,206,52]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":2,"text":"отвечает за район","textPreview":"отвечает за район","textChars":17,"textLines":1,"bbox":[116,338,202,40]}
+{"kind":"shape","id":"sh/cbulwval","slide":2,"bbox":[390,260,250,132]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":2,"text":"класс","textPreview":"класс","textChars":5,"textLines":1,"bbox":[412,282,206,52]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":2,"text":"следит за улицей","textPreview":"следит за улицей","textChars":16,"textLines":1,"bbox":[414,338,202,40]}
+{"kind":"shape","id":"sh/0rqd4vmt","slide":2,"bbox":[688,260,250,132]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":2,"text":"ребёнок","textPreview":"ребёнок","textChars":7,"textLines":1,"bbox":[710,282,206,52]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":2,"text":"делает доброе дело","textPreview":"делает доброе дело","textChars":18,"textLines":1,"bbox":[712,338,202,40]}
+{"kind":"shape","id":"sh/t47y1kre","slide":2,"bbox":[986,242,172,172]}
+{"kind":"textbox","id":"sh/0je9cvix","slide":2,"text":"KG","textPreview":"KG","textChars":2,"textLines":1,"bbox":[1017,276,110,52]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":2,"text":"чистая страна","textPreview":"чистая страна","textChars":13,"textLines":1,"bbox":[1008,338,128,46]}
+{"kind":"textbox","id":"sh/idonyd0z","slide":2,"text":"Идея: не просто говорить об экологии, а каждый день превращать её в конкретное действие.","textPreview":"Идея: не просто говорить об экологии, а каждый день превращать её в конкретное действие.","textChars":88,"textLines":1,"bbox":[144,488,990,58]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":2,"text":"Учись. Делай добро. Меняй мир.","textPreview":"Учись. Делай добро. Меняй мир.","textChars":30,"textLines":1,"bbox":[64,682,380,18]}
+{"kind":"notes","id":"nt/495hyz","slide":2,"text":""}
+{"kind":"slide","id":"sl/fm6fc2","slide":3,"title":"GREENLEARNAI","textShapes":18}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":3,"name":"eyebrow-3","text":"GREENLEARNAI","textPreview":"GREENLEARNAI","textChars":12,"textLines":1,"bbox":[64,28,220,24]}
+{"kind":"textbox","id":"sh/d0z61032","slide":3,"name":"title-3","text":"Проблема детей сегодня","textPreview":"Проблема детей сегодня","textChars":22,"textLines":1,"bbox":[64,72,790,86]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":3,"name":"subtitle-3","text":"Телефон забирает внимание, а реальный мир всё чаще остаётся без участия ребёнка.","textPreview":"Телефон забирает внимание, а реальный мир всё чаще остаётся без участия ребёнка.","textChars":80,"textLines":1,"bbox":[64,154,820,46]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1168,30,48,24]}
+{"kind":"shape","id":"sh/2lszqtcj","slide":3,"bbox":[72,230,260,190]}
+{"kind":"shape","id":"sh/d8bat47y","slide":3,"bbox":[90,248,48,48]}
+{"kind":"textbox","id":"sh/knih4byh","slide":3,"text":"📱","textPreview":"📱","textChars":2,"textLines":1,"bbox":[90,258,48,28]}
+{"kind":"textbox","id":"sh/val87ed8","slide":3,"text":"Зависимость","textPreview":"Зависимость","textChars":11,"textLines":1,"bbox":[148,247,168,38]}
+{"kind":"textbox","id":"sh/6psfil0r","slide":3,"text":"Дети всё раньше привыкают к телефону и короткому вниманию.","textPreview":"Дети всё раньше привыкают к телефону и короткому вниманию.","textChars":58,"textLines":1,"bbox":[148,288,164,114]}
+{"kind":"shape","id":"sh/4r65wjud","slide":3,"bbox":[360,230,260,190]}
+{"kind":"shape","id":"sh/xc3ylc7u","slide":3,"bbox":[378,248,48,48]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":3,"text":"🧠","textPreview":"🧠","textChars":2,"textLines":1,"bbox":[378,258,48,28]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":3,"text":"Концентрация","textPreview":"Концентрация","textChars":12,"textLines":1,"bbox":[436,247,168,38]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":3,"text":"Снижаются память, усидчивость и творческое мышление.","textPreview":"Снижаются память, усидчивость и творческое мышление.","textChars":52,"textLines":1,"bbox":[436,288,164,114]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":3,"bbox":[648,230,260,190]}
+{"kind":"shape","id":"sh/mtwra5gb","slide":3,"bbox":[666,248,48,48]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":3,"text":"💬","textPreview":"💬","textChars":2,"textLines":1,"bbox":[666,258,48,28]}
+{"kind":"textbox","id":"sh/83itgfml","slide":3,"text":"Речь","textPreview":"Речь","textChars":4,"textLines":1,"bbox":[724,247,168,38]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":3,"text":"Некоторым детям сложно формулировать длинные предложения.","textPreview":"Некоторым детям сложно формулировать длинные предложения.","textChars":57,"textLines":1,"bbox":[724,288,164,114]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":3,"bbox":[936,230,260,190]}
+{"kind":"shape","id":"sh/s72x4nap","slide":3,"bbox":[954,248,48,48]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":3,"text":"🌱","textPreview":"🌱","textChars":2,"textLines":1,"bbox":[954,258,48,28]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":3,"text":"Ответственность","textPreview":"Ответственность","textChars":15,"textLines":1,"bbox":[1012,247,168,38]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":3,"text":"Не всегда есть личная связь между поступком и будущим страны.","textPreview":"Не всегда есть личная связь между поступком и будущим страны.","textChars":61,"textLines":1,"bbox":[1012,288,164,114]}
+{"kind":"textbox","id":"sh/sji5snel","slide":3,"text":"Мы объединяем эти проблемы в одну систему мотивации.","textPreview":"Мы объединяем эти проблемы в одну систему мотивации.","textChars":52,"textLines":1,"bbox":[146,500,990,42]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":3,"text":"Учись. Делай добро. Меняй мир.","textPreview":"Учись. Делай добро. Меняй мир.","textChars":30,"textLines":1,"bbox":[64,682,380,18]}
+{"kind":"notes","id":"nt/fm6fc2","slide":3,"text":""}
+{"kind":"slide","id":"sl/o3vbla","slide":4,"title":"GREENLEARNAI","textShapes":21}
+{"kind":"textbox","id":"sh/5sneloj2","slide":4,"name":"eyebrow-4","text":"GREENLEARNAI","textPreview":"GREENLEARNAI","textChars":12,"textLines":1,"bbox":[64,28,220,24]}
+{"kind":"textbox","id":"sh/u54zidon","slide":4,"name":"title-4","text":"Решение: обучение + действие + награда","textPreview":"Решение: обучение + действие + награда","textChars":38,"textLines":1,"bbox":[64,72,790,86]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":4,"name":"subtitle-4","text":"GreenLearnAI переводит экранное время в реальные полезные дела.","textPreview":"GreenLearnAI переводит экранное время в реальные полезные дела.","textChars":63,"textLines":1,"bbox":[64,154,820,46]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1168,30,48,24]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":4,"bbox":[72,276,250,156]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":4,"bbox":[90,294,48,48]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":4,"text":"AI","textPreview":"AI","textChars":2,"textLines":1,"bbox":[90,304,48,28]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":4,"text":"AI-задание","textPreview":"AI-задание","textChars":10,"textLines":1,"bbox":[148,293,158,38]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":4,"text":"Персональная миссия по возрасту и интересу.","textPreview":"Персональная миссия по возрасту и интересу.","textChars":43,"textLines":1,"bbox":[148,334,154,80]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[330,331,44,44]}
+{"kind":"shape","id":"sh/knih4byh","slide":4,"bbox":[376,276,250,156]}
+{"kind":"shape","id":"sh/v6psfil0","slide":4,"bbox":[394,294,48,48]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":4,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[394,304,48,28]}
+{"kind":"textbox","id":"sh/d0z61032","slide":4,"text":"Реальное дело","textPreview":"Реальное дело","textChars":13,"textLines":1,"bbox":[452,293,158,38]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":4,"text":"Ребёнок действует вне телефона: дом, школа, улица.","textPreview":"Ребёнок действует вне телефона: дом, школа, улица.","textChars":50,"textLines":1,"bbox":[452,334,154,80]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[634,331,44,44]}
+{"kind":"shape","id":"sh/29gr2p8n","slide":4,"bbox":[680,276,250,156]}
+{"kind":"shape","id":"sh/donyd0z6","slide":4,"bbox":[698,294,48,48]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":4,"text":"💬","textPreview":"💬","textChars":2,"textLines":1,"bbox":[698,304,48,28]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":4,"text":"Ответ AI","textPreview":"Ответ AI","textChars":8,"textLines":1,"bbox":[756,293,158,38]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":4,"text":"Фото, голос или рассказ помогают развить речь и мышление.","textPreview":"Фото, голос или рассказ помогают развить речь и мышление.","textChars":57,"textLines":1,"bbox":[756,334,154,80]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[938,331,44,44]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":4,"bbox":[984,276,220,156]}
+{"kind":"shape","id":"sh/kzupwb2h","slide":4,"bbox":[1002,294,48,48]}
+{"kind":"textbox","id":"sh/9knih4by","slide":4,"text":"★","textPreview":"★","textChars":1,"textLines":1,"bbox":[1002,304,48,28]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":4,"text":"GreenPoints","textPreview":"GreenPoints","textChars":11,"textLines":1,"bbox":[1060,293,128,38]}
+{"kind":"textbox","id":"sh/re1w7mp0","slide":4,"text":"Баллы можно обменять на реальные награды.","textPreview":"Баллы можно обменять на реальные награды.","textChars":41,"textLines":1,"bbox":[1060,334,124,80]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":4,"text":"Не просто приложение, а система привычек.","textPreview":"Не просто приложение, а система привычек.","textChars":41,"textLines":1,"bbox":[180,512,920,50]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":4,"text":"Учись. Делай добро. Меняй мир.","textPreview":"Учись. Делай добро. Меняй мир.","textChars":30,"textLines":1,"bbox":[64,682,380,18]}
+{"kind":"notes","id":"nt/o3vbla","slide":4,"text":""}
+{"kind":"slide","id":"sl/8arqbn","slide":5,"title":"GREENLEARNAI","textShapes":16}
+{"kind":"textbox","id":"sh/svu9knih","slide":5,"name":"eyebrow-5","text":"GREENLEARNAI","textPreview":"GREENLEARNAI","textChars":12,"textLines":1,"bbox":[64,28,220,24]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":5,"name":"title-5","text":"Для маленьких детей: AI-друг","textPreview":"Для маленьких детей: AI-друг","textChars":28,"textLines":1,"bbox":[64,72,790,86]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":5,"name":"subtitle-5","text":"Добрый персонаж помогает говорить, думать и объяснять свои действия.","textPreview":"Добрый персонаж помогает говорить, думать и объяснять свои действия.","textChars":68,"textLines":1,"bbox":[64,154,820,46]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1168,30,48,24]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":5,"bbox":[82,236,470,272]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":5,"text":"“Полей цветы и расскажи,\nпочему растениям нужна вода.”","textPreview":"“Полей цветы и расскажи, | почему растениям нужна вода.”","textChars":54,"textLines":2,"bbox":[122,282,390,118]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":5,"text":"Задание выводит ребёнка из телефона в реальный мир.","textPreview":"Задание выводит ребёнка из телефона в реальный мир.","textChars":51,"textLines":1,"bbox":[130,424,374,44]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":5,"bbox":[626,230,510,86]}
+{"kind":"shape","id":"sh/s72x4nap","slide":5,"bbox":[644,248,48,48]}
+{"kind":"textbox","id":"sh/idonyd0z","slide":5,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[644,258,48,28]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":5,"text":"1. Сделал","textPreview":"1. Сделал","textChars":9,"textLines":1,"bbox":[702,247,418,30]}
+{"kind":"textbox","id":"sh/0je9cvix","slide":5,"text":"Полил цветы, помог дома, убрал мусор или посадил дерево.","textPreview":"Полил цветы, помог дома, убрал мусор или посадил дерево.","textChars":56,"textLines":1,"bbox":[702,278,414,32]}
+{"kind":"shape","id":"sh/t47y1kre","slide":5,"bbox":[626,336,510,86]}
+{"kind":"shape","id":"sh/il0rqd4v","slide":5,"bbox":[644,354,48,48]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":5,"text":"💬","textPreview":"💬","textChars":2,"textLines":1,"bbox":[644,364,48,28]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":5,"text":"2. Рассказал","textPreview":"2. Рассказал","textChars":12,"textLines":1,"bbox":[702,353,418,30]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":5,"text":"Произнес мысль: причина, действие, результат.","textPreview":"Произнес мысль: причина, действие, результат.","textChars":45,"textLines":1,"bbox":[702,384,414,32]}
+{"kind":"shape","id":"sh/ixczed8v","slide":5,"bbox":[626,442,510,86]}
+{"kind":"shape","id":"sh/bi9s36hc","slide":5,"bbox":[644,460,48,48]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":5,"text":"AI","textPreview":"AI","textChars":2,"textLines":1,"bbox":[644,470,48,28]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":5,"text":"3. Получил поддержку","textPreview":"3. Получил поддержку","textChars":20,"textLines":1,"bbox":[702,459,418,30]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":5,"text":"AI помогает сформулировать правильную фразу и похвалить усилие.","textPreview":"AI помогает сформулировать правильную фразу и похвалить усилие.","textChars":63,"textLines":1,"bbox":[702,490,414,32]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":5,"text":"Учись. Делай добро. Меняй мир.","textPreview":"Учись. Делай добро. Меняй мир.","textChars":30,"textLines":1,"bbox":[64,682,380,18]}
+{"kind":"notes","id":"nt/8arqbn","slide":5,"text":""}
+{"kind":"slide","id":"sl/ud0i6y","slide":6,"title":"GREENLEARNAI","textShapes":12}
+{"kind":"textbox","id":"sh/vahoza1g","slide":6,"text":"GREENLEARNAI","textPreview":"GREENLEARNAI","textChars":12,"textLines":1,"bbox":[64,30,220,24]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":6,"text":"Для подростков: наставник","textPreview":"Для подростков: наставник","textChars":25,"textLines":1,"bbox":[64,78,800,58]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":6,"text":"Эко-челленджи, лидерство, волонтёрство, память и ответственность — без занудства.","textPreview":"Эко-челленджи, лидерство, волонтёрство, память и ответственность — без занудства.","textChars":81,"textLines":1,"bbox":[66,144,900,52]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":6,"bbox":[84,254,500,122]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":6,"bbox":[84,254,8,122]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":6,"text":"эко-челлендж","textPreview":"эко-челлендж","textChars":12,"textLines":1,"bbox":[112,274,430,30]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":6,"text":"сдать батарейки, макулатуру, убрать двор","textPreview":"сдать батарейки, макулатуру, убрать двор","textChars":40,"textLines":1,"bbox":[112,312,430,44]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":6,"bbox":[644,254,500,122]}
+{"kind":"shape","id":"sh/vy90je9c","slide":6,"bbox":[644,254,8,122]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":6,"text":"творчество","textPreview":"творчество","textChars":10,"textLines":1,"bbox":[672,274,430,30]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":6,"text":"нарисовать, снять короткое видео, придумать проект","textPreview":"нарисовать, снять короткое видео, придумать проект","textChars":50,"textLines":1,"bbox":[672,312,430,44]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":6,"bbox":[84,414,500,122]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":6,"bbox":[84,414,8,122]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":6,"text":"волонтёрство","textPreview":"волонтёрство","textChars":12,"textLines":1,"bbox":[112,434,430,30]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":6,"text":"помочь школе, району, соседям, семье","textPreview":"помочь школе, району, соседям, семье","textChars":36,"textLines":1,"bbox":[112,472,430,44]}
+{"kind":"shape","id":"sh/58z25kb6","slide":6,"bbox":[644,414,500,122]}
+{"kind":"shape","id":"sh/gn29gr2p","slide":6,"bbox":[644,414,8,122]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":6,"text":"лидерство","textPreview":"лидерство","textChars":9,"textLines":1,"bbox":[672,434,430,30]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":6,"text":"вести команду класса и видеть общий результат","textPreview":"вести команду класса и видеть общий результат","textChars":45,"textLines":1,"bbox":[672,472,430,44]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1168,30,48,24]}
+{"kind":"notes","id":"nt/ud0i6y","slide":6,"text":""}
+{"kind":"slide","id":"sl/32fjxa","slide":7,"title":"GREENLEARNAI","textShapes":19}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":7,"name":"eyebrow-7","text":"GREENLEARNAI","textPreview":"GREENLEARNAI","textChars":12,"textLines":1,"bbox":[64,28,220,24]}
+{"kind":"textbox","id":"sh/judg7ads","slide":7,"name":"title-7","text":"Для родителей: панель воспитания","textPreview":"Для родителей: панель воспитания","textChars":32,"textLines":1,"bbox":[64,72,790,86]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":7,"name":"subtitle-7","text":"Родитель покупает GreenPoints и сам задаёт условия для семейных миссий.","textPreview":"Родитель покупает GreenPoints и сам задаёт условия для семейных миссий.","textChars":71,"textLines":1,"bbox":[64,154,820,46]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1168,30,48,24]}
+{"kind":"shape","id":"sh/c7u54zid","slide":7,"bbox":[80,232,338,110]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":7,"bbox":[98,250,48,48]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":7,"text":"🏃","textPreview":"🏃","textChars":2,"textLines":1,"bbox":[98,260,48,28]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":7,"text":"Сделай зарядку","textPreview":"Сделай зарядку","textChars":14,"textLines":1,"bbox":[156,249,246,30]}
+{"kind":"textbox","id":"sh/cvixczed","slide":7,"text":"20 баллов","textPreview":"20 баллов","textChars":9,"textLines":1,"bbox":[156,280,242,56]}
+{"kind":"shape","id":"sh/m1cfa9w3","slide":7,"bbox":[80,370,338,110]}
+{"kind":"shape","id":"sh/bm58z25k","slide":7,"bbox":[98,388,48,48]}
+{"kind":"textbox","id":"sh/47y1kre1","slide":7,"text":"📚","textPreview":"📚","textChars":2,"textLines":1,"bbox":[98,398,48,28]}
+{"kind":"textbox","id":"sh/tsvu9kni","slide":7,"text":"Прочитай книгу","textPreview":"Прочитай книгу","textChars":14,"textLines":1,"bbox":[156,387,246,30]}
+{"kind":"textbox","id":"sh/mp0bi9s3","slide":7,"text":"30 баллов за пересказ AI","textPreview":"30 баллов за пересказ AI","textChars":24,"textLines":1,"bbox":[156,418,242,56]}
+{"kind":"shape","id":"sh/bat47y1k","slide":7,"bbox":[80,508,338,110]}
+{"kind":"shape","id":"sh/4vmtwra5","slide":7,"bbox":[98,526,48,48]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":7,"text":"⏱","textPreview":"⏱","textChars":1,"textLines":1,"bbox":[98,536,48,28]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":7,"text":"Один час без телефона","textPreview":"Один час без телефона","textChars":21,"textLines":1,"bbox":[156,525,246,30]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":7,"text":"50 баллов","textPreview":"50 баллов","textChars":9,"textLines":1,"bbox":[156,556,242,56]}
+{"kind":"shape","id":"sh/7u54zido","slide":7,"bbox":[520,238,620,318]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":7,"text":"Что видит родитель","textPreview":"Что видит родитель","textChars":18,"textLines":1,"bbox":[560,272,360,34]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":7,"bbox":[566,342,12,12]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":7,"text":"задания ребёнка и статус выполнения","textPreview":"задания ребёнка и статус выполнения","textChars":35,"textLines":1,"bbox":[590,334,620,32]}
+{"kind":"shape","id":"sh/36hcrmhk","slide":7,"bbox":[566,394,12,12]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":7,"text":"AI-отчёты по фото и голосу","textPreview":"AI-отчёты по фото и голосу","textChars":26,"textLines":1,"bbox":[590,386,620,32]}
+{"kind":"shape","id":"sh/lc7u54zi","slide":7,"bbox":[566,446,12,12]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":7,"text":"прогресс, привычки и GreenPoints","textPreview":"прогресс, привычки и GreenPoints","textChars":32,"textLines":1,"bbox":[590,438,620,32]}
+{"kind":"shape","id":"sh/7adsji5s","slide":7,"bbox":[566,498,12,12]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":7,"text":"реальные награды вместо пустого экрана","textPreview":"реальные награды вместо пустого экрана","textChars":38,"textLines":1,"bbox":[590,490,620,32]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":7,"text":"Учись. Делай добро. Меняй мир.","textPreview":"Учись. Делай добро. Меняй мир.","textChars":30,"textLines":1,"bbox":[64,682,380,18]}
+{"kind":"notes","id":"nt/32fjxa","slide":7,"text":""}
+{"kind":"slide","id":"sl/oi32xh","slide":8,"title":"GREENLEARNAI","textShapes":14}
+{"kind":"textbox","id":"sh/tovahoza","slide":8,"name":"eyebrow-8","text":"GREENLEARNAI","textPreview":"GREENLEARNAI","textChars":12,"textLines":1,"bbox":[64,28,220,24]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":8,"name":"title-8","text":"Для школ и ВУЗов: цифровая мотивация","textPreview":"Для школ и ВУЗов: цифровая мотивация","textChars":36,"textLines":1,"bbox":[64,72,790,86]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":8,"name":"subtitle-8","text":"Учитель ставит миссии, класс выполняет, школа видит результат.","textPreview":"Учитель ставит миссии, класс выполняет, школа видит результат.","textChars":62,"textLines":1,"bbox":[64,154,820,46]}
+{"kind":"textbox","id":"sh/0fepkzup","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1168,30,48,24]}
+{"kind":"shape","id":"sh/p0bi9s36","slide":8,"bbox":[104,228,900,62]}
+{"kind":"shape","id":"sh/i9s36hcr","slide":8,"bbox":[126,245,28,28]}
+{"kind":"textbox","id":"sh/bulwval8","slide":8,"text":"Участие в субботнике","textPreview":"Участие в субботнике","textChars":20,"textLines":1,"bbox":[174,245,570,28]}
+{"kind":"textbox","id":"sh/0je9cvix","slide":8,"text":"50 баллов","textPreview":"50 баллов","textChars":9,"textLines":1,"bbox":[810,245,150,28]}
+{"kind":"shape","id":"sh/t47y1kre","slide":8,"bbox":[104,314,900,62]}
+{"kind":"shape","id":"sh/9s36hcrm","slide":8,"bbox":[126,331,28,28]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":8,"text":"Сдать макулатуру","textPreview":"Сдать макулатуру","textChars":16,"textLines":1,"bbox":[174,331,570,28]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":8,"text":"70 баллов","textPreview":"70 баллов","textChars":9,"textLines":1,"bbox":[810,331,150,28]}
+{"kind":"shape","id":"sh/y1kre1w7","slide":8,"bbox":[104,400,900,62]}
+{"kind":"shape","id":"sh/90je9cvi","slide":8,"bbox":[126,417,28,28]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":8,"text":"Помочь в школьном мероприятии","textPreview":"Помочь в школьном мероприятии","textChars":29,"textLines":1,"bbox":[174,417,570,28]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":8,"text":"100 баллов","textPreview":"100 баллов","textChars":10,"textLines":1,"bbox":[810,417,150,28]}
+{"kind":"shape","id":"sh/yd0z6103","slide":8,"bbox":[104,486,900,62]}
+{"kind":"shape","id":"sh/9cvixcze","slide":8,"bbox":[126,503,28,28]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":8,"text":"Неделя без опозданий","textPreview":"Неделя без опозданий","textChars":20,"textLines":1,"bbox":[174,503,570,28]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":8,"text":"30 баллов","textPreview":"30 баллов","textChars":9,"textLines":1,"bbox":[810,503,150,28]}
+{"kind":"shape","id":"sh/1orytsvu","slide":8,"bbox":[1030,232,116,320]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":8,"text":"класс\n→\nулица\n→\nрайон","textPreview":"класс | → | улица | → | район","textChars":21,"textLines":5,"bbox":[1034,276,106,218]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":8,"text":"Учись. Делай добро. Меняй мир.","textPreview":"Учись. Делай добро. Меняй мир.","textChars":30,"textLines":1,"bbox":[64,682,380,18]}
+{"kind":"notes","id":"nt/oi32xh","slide":8,"text":""}
+{"kind":"slide","id":"sl/vh4gow","slide":9,"title":"GREENLEARNAI","textShapes":22}
+{"kind":"textbox","id":"sh/p4r65wju","slide":9,"name":"eyebrow-9","text":"GREENLEARNAI","textPreview":"GREENLEARNAI","textChars":12,"textLines":1,"bbox":[64,28,220,24]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":9,"name":"title-9","text":"Эко-карта Кыргызстана","textPreview":"Эко-карта Кыргызстана","textChars":21,"textLines":1,"bbox":[64,72,790,86]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":9,"name":"subtitle-9","text":"Каждая школа видит свой участок, а город видит общий прогресс.","textPreview":"Каждая школа видит свой участок, а город видит общий прогресс.","textChars":62,"textLines":1,"bbox":[64,154,820,46]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1168,30,48,24]}
+{"kind":"shape","id":"sh/pwb2hwfy","slide":9,"bbox":[104,218,760,390]}
+{"kind":"textbox","id":"sh/i5sneloj","slide":9,"text":"Бишкек","textPreview":"Бишкек","textChars":6,"textLines":1,"bbox":[184,278,110,30]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":9,"text":"Ош","textPreview":"Ош","textChars":2,"textLines":1,"bbox":[530,486,70,30]}
+{"kind":"shape","id":"sh/0z61032l","slide":9,"bbox":[250,340,34,34]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":9,"text":"Школа 1","textPreview":"Школа 1","textChars":7,"textLines":1,"bbox":[224,378,90,20]}
+{"kind":"shape","id":"sh/5sneloj2","slide":9,"bbox":[370,300,34,34]}
+{"kind":"textbox","id":"sh/cbulwval","slide":9,"text":"Школа 2","textPreview":"Школа 2","textChars":7,"textLines":1,"bbox":[344,338,90,20]}
+{"kind":"shape","id":"sh/nqxs72x4","slide":9,"bbox":[492,356,34,34]}
+{"kind":"textbox","id":"sh/u54zidon","slide":9,"text":"Школа 3","textPreview":"Школа 3","textChars":7,"textLines":1,"bbox":[466,394,90,20]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":9,"bbox":[640,310,34,34]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":9,"text":"Школа 4","textPreview":"Школа 4","textChars":7,"textLines":1,"bbox":[614,348,90,20]}
+{"kind":"shape","id":"sh/neloj2t8","slide":9,"bbox":[574,526,34,34]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":9,"text":"ВУЗ","textPreview":"ВУЗ","textChars":3,"textLines":1,"bbox":[548,564,90,20]}
+{"kind":"shape","id":"sh/58z25kb6","slide":9,"bbox":[720,450,34,34]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":9,"text":"Лицей","textPreview":"Лицей","textChars":5,"textLines":1,"bbox":[694,488,90,20]}
+{"kind":"shape","id":"sh/cvixczed","slide":9,"bbox":[920,238,250,100]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":9,"bbox":[938,256,48,48]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":9,"text":"🌱","textPreview":"🌱","textChars":2,"textLines":1,"bbox":[938,266,48,28]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":9,"text":"Чистота","textPreview":"Чистота","textChars":7,"textLines":1,"bbox":[996,255,158,30]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":9,"text":"районы и улицы без мусора","textPreview":"районы и улицы без мусора","textChars":25,"textLines":1,"bbox":[996,286,154,46]}
+{"kind":"shape","id":"sh/54zidony","slide":9,"bbox":[920,362,250,100]}
+{"kind":"shape","id":"sh/udg7adsj","slide":9,"bbox":[938,380,48,48]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":9,"text":"🌳","textPreview":"🌳","textChars":2,"textLines":1,"bbox":[938,390,48,28]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":9,"text":"Деревья","textPreview":"Деревья","textChars":7,"textLines":1,"bbox":[996,379,158,30]}
+{"kind":"textbox","id":"sh/1032lszq","slide":9,"text":"посадки и уход по школам","textPreview":"посадки и уход по школам","textChars":24,"textLines":1,"bbox":[996,410,154,46]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":9,"bbox":[920,486,250,100]}
+{"kind":"shape","id":"sh/2hwfyxob","slide":9,"bbox":[938,504,48,48]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":9,"text":"★","textPreview":"★","textChars":1,"textLines":1,"bbox":[938,514,48,28]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":9,"text":"Рейтинг","textPreview":"Рейтинг","textChars":7,"textLines":1,"bbox":[996,503,158,30]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":9,"text":"классы соревнуются добрыми делами","textPreview":"классы соревнуются добрыми делами","textChars":33,"textLines":1,"bbox":[996,534,154,46]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":9,"text":"Учись. Делай добро. Меняй мир.","textPreview":"Учись. Делай добро. Меняй мир.","textChars":30,"textLines":1,"bbox":[64,682,380,18]}
+{"kind":"notes","id":"nt/vh4gow","slide":9,"text":""}
+{"kind":"slide","id":"sl/g0kvas","slide":10,"title":"GREENLEARNAI","textShapes":20}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":10,"name":"eyebrow-10","text":"GREENLEARNAI","textPreview":"GREENLEARNAI","textChars":12,"textLines":1,"bbox":[64,28,220,24]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":10,"name":"title-10","text":"Ценность для всех участников","textPreview":"Ценность для всех участников","textChars":28,"textLines":1,"bbox":[64,72,790,86]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":10,"name":"subtitle-10","text":"Одна платформа связывает детей, родителей, школы, бренды и страну.","textPreview":"Одна платформа связывает детей, родителей, школы, бренды и страну.","textChars":66,"textLines":1,"bbox":[64,154,820,46]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1168,30,48,24]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":10,"bbox":[78,238,330,126]}
+{"kind":"shape","id":"sh/3itgfmlk","slide":10,"bbox":[96,256,48,48]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":10,"text":"👧","textPreview":"👧","textChars":2,"textLines":1,"bbox":[96,266,48,28]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":10,"text":"Дети","textPreview":"Дети","textChars":4,"textLines":1,"bbox":[154,255,238,38]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":10,"text":"развитие, привычки, награды","textPreview":"развитие, привычки, награды","textChars":27,"textLines":1,"bbox":[154,296,234,50]}
+{"kind":"shape","id":"sh/il0rqd4v","slide":10,"bbox":[460,238,330,126]}
+{"kind":"shape","id":"sh/b6xkf6dc","slide":10,"bbox":[478,256,48,48]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":10,"text":"👨‍👩‍👧","textPreview":"👨‍👩‍👧","textChars":8,"textLines":1,"bbox":[478,266,48,28]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":10,"text":"Родители","textPreview":"Родители","textChars":8,"textLines":1,"bbox":[536,255,238,38]}
+{"kind":"textbox","id":"sh/idonyd0z","slide":10,"text":"инструмент воспитания","textPreview":"инструмент воспитания","textChars":21,"textLines":1,"bbox":[536,296,234,50]}
+{"kind":"shape","id":"sh/byhgn29g","slide":10,"bbox":[842,238,330,126]}
+{"kind":"shape","id":"sh/0je9cvix","slide":10,"bbox":[860,256,48,48]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":10,"text":"🏫","textPreview":"🏫","textChars":2,"textLines":1,"bbox":[860,266,48,28]}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":10,"text":"Школы","textPreview":"Школы","textChars":5,"textLines":1,"bbox":[918,255,238,38]}
+{"kind":"textbox","id":"sh/bulwval8","slide":10,"text":"мотивация и аналитика","textPreview":"мотивация и аналитика","textChars":21,"textLines":1,"bbox":[918,296,234,50]}
+{"kind":"shape","id":"sh/3itgfmlk","slide":10,"bbox":[78,430,520,126]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":10,"bbox":[96,448,48,48]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":10,"text":"🏷","textPreview":"🏷","textChars":2,"textLines":1,"bbox":[96,458,48,28]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":10,"text":"Бренды","textPreview":"Бренды","textChars":6,"textLines":1,"bbox":[154,447,428,38]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":10,"text":"реклама и социальный имидж","textPreview":"реклама и социальный имидж","textChars":26,"textLines":1,"bbox":[154,488,424,50]}
+{"kind":"shape","id":"sh/e9cvixcz","slide":10,"bbox":[460,430,520,126]}
+{"kind":"shape","id":"sh/lwval87e","slide":10,"bbox":[478,448,48,48]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":10,"text":"KG","textPreview":"KG","textChars":2,"textLines":1,"bbox":[478,458,48,28]}
+{"kind":"textbox","id":"sh/32lszqtc","slide":10,"text":"Страна","textPreview":"Страна","textChars":6,"textLines":1,"bbox":[536,447,428,38]}
+{"kind":"textbox","id":"sh/ahoza1gv","slide":10,"text":"поколение, которое восстанавливает","textPreview":"поколение, которое восстанавливает","textChars":34,"textLines":1,"bbox":[536,488,424,50]}
+{"kind":"textbox","id":"sh/knih4byh","slide":10,"text":"Учись. Делай добро. Меняй мир.","textPreview":"Учись. Делай добро. Меняй мир.","textChars":30,"textLines":1,"bbox":[64,682,380,18]}
+{"kind":"notes","id":"nt/g0kvas","slide":10,"text":""}
+{"kind":"slide","id":"sl/ld4ljf","slide":11,"title":"GREENLEARNAI","textShapes":17}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":11,"name":"eyebrow-11","text":"GREENLEARNAI","textPreview":"GREENLEARNAI","textChars":12,"textLines":1,"bbox":[64,28,220,24]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":11,"name":"title-11","text":"Монетизация","textPreview":"Монетизация","textChars":11,"textLines":1,"bbox":[64,72,790,86]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":11,"name":"subtitle-11","text":"В системе есть несколько сторон, которым выгодно покупать или финансировать GreenPoints.","textPreview":"В системе есть несколько сторон, которым выгодно покупать или финансировать GreenPoints.","textChars":88,"textLines":1,"bbox":[64,154,820,46]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1168,30,48,24]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":11,"bbox":[84,236,560,320]}
+{"kind":"shape","id":"sh/gvy90je9","slide":11,"bbox":[710,224,440,82]}
+{"kind":"shape","id":"sh/re1w7mp0","slide":11,"bbox":[728,242,48,48]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":11,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[728,252,48,28]}
+{"kind":"textbox","id":"sh/sneloj2t","slide":11,"text":"1. Семьи","textPreview":"1. Семьи","textChars":8,"textLines":1,"bbox":[786,241,348,30]}
+{"kind":"textbox","id":"sh/l87ed8ba","slide":11,"text":"покупка GreenPoints для домашних миссий","textPreview":"покупка GreenPoints для домашних миссий","textChars":39,"textLines":1,"bbox":[786,272,344,28]}
+{"kind":"shape","id":"sh/ahoza1gv","slide":11,"bbox":[710,314,440,82]}
+{"kind":"shape","id":"sh/32lszqtc","slide":11,"bbox":[728,332,48,48]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":11,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[728,342,48,28]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":11,"text":"2. Школы и ВУЗы","textPreview":"2. Школы и ВУЗы","textChars":15,"textLines":1,"bbox":[786,331,348,30]}
+{"kind":"textbox","id":"sh/at47y1kr","slide":11,"text":"пакеты баллов для классов и студентов","textPreview":"пакеты баллов для классов и студентов","textChars":37,"textLines":1,"bbox":[786,362,344,28]}
+{"kind":"shape","id":"sh/3ex0nuxc","slide":11,"bbox":[710,404,440,82]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":11,"bbox":[728,422,48,48]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":11,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[728,432,48,28]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":11,"text":"3. Бренды","textPreview":"3. Бренды","textChars":9,"textLines":1,"bbox":[786,421,348,30]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":11,"text":"партнёрские миссии, купоны и акции","textPreview":"партнёрские миссии, купоны и акции","textChars":34,"textLines":1,"bbox":[786,452,344,28]}
+{"kind":"shape","id":"sh/72x4nap4","slide":11,"bbox":[710,494,440,82]}
+{"kind":"shape","id":"sh/ih4byhgn","slide":11,"bbox":[728,512,48,48]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":11,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[728,522,48,28]}
+{"kind":"textbox","id":"sh/0z61032l","slide":11,"text":"4. Premium","textPreview":"4. Premium","textChars":10,"textLines":1,"bbox":[786,511,348,30]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":11,"text":"расширенная аналитика для родителей и организаций","textPreview":"расширенная аналитика для родителей и организаций","textChars":49,"textLines":1,"bbox":[786,542,344,28]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":11,"text":"Учись. Делай добро. Меняй мир.","textPreview":"Учись. Делай добро. Меняй мир.","textChars":30,"textLines":1,"bbox":[64,682,380,18]}
+{"kind":"chart","id":"ch/lkjm1cfa","slide":11,"name":"","chartType":"bar","bbox":[120,288,490,220]}
+{"kind":"notes","id":"nt/ld4ljf","slide":11,"text":""}
+{"kind":"slide","id":"sl/oy8o8z","slide":12,"title":"Дорожная карта","textShapes":18}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":12,"text":"Дорожная карта","textPreview":"Дорожная карта","textChars":14,"textLines":1,"bbox":[72,64,620,54]}
+{"kind":"shape","id":"sh/87ed8bat","slide":12,"bbox":[92,202,68,68]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":12,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[109,213,34,42]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":12,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[184,213,44,44]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":12,"text":"Школы Бишкека","textPreview":"Школы Бишкека","textChars":13,"textLines":1,"bbox":[68,304,190,34]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":12,"text":"пилотные классы и первые GreenPoints","textPreview":"пилотные классы и первые GreenPoints","textChars":36,"textLines":1,"bbox":[54,346,220,64]}
+{"kind":"shape","id":"sh/1gvy90je","slide":12,"bbox":[378,202,68,68]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":12,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[395,213,34,42]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":12,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[470,213,44,44]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":12,"text":"Городская эко-карта","textPreview":"Городская эко-карта","textChars":19,"textLines":1,"bbox":[354,304,190,34]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":12,"text":"районы, улицы, парки и школьные зоны","textPreview":"районы, улицы, парки и школьные зоны","textChars":36,"textLines":1,"bbox":[340,346,220,64]}
+{"kind":"shape","id":"sh/1gvy90je","slide":12,"bbox":[664,202,68,68]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":12,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[681,213,34,42]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":12,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[756,213,44,44]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":12,"text":"Партнёры","textPreview":"Партнёры","textChars":8,"textLines":1,"bbox":[640,304,190,34]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":12,"text":"купоны, награды, образовательные центры","textPreview":"купоны, награды, образовательные центры","textChars":39,"textLines":1,"bbox":[626,346,220,64]}
+{"kind":"shape","id":"sh/87ed8bat","slide":12,"bbox":[950,202,68,68]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":12,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[967,213,34,42]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":12,"text":"Весь Кыргызстан","textPreview":"Весь Кыргызстан","textChars":15,"textLines":1,"bbox":[926,304,190,34]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":12,"text":"национальное движение добрых дел","textPreview":"национальное движение добрых дел","textChars":32,"textLines":1,"bbox":[912,346,220,64]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":12,"bbox":[132,500,1016,108]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":12,"text":"Мы не просто даём детям приложение. Мы даём им причину стать лучше.","textPreview":"Мы не просто даём детям приложение. Мы даём им причину стать лучше.","textChars":67,"textLines":1,"bbox":[178,526,924,58]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":12,"text":"GreenLearnAI — учись, делай добро, меняй мир.","textPreview":"GreenLearnAI — учись, делай добро, меняй мир.","textChars":45,"textLines":1,"bbox":[320,646,640,28]}
+{"kind":"notes","id":"nt/oy8o8z","slide":12,"text":""}

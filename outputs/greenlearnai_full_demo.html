@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenLearnAI - демо проекта</title>
+<style>
+:root {
+  --bg: #0c0f14;
+  --bg2: #121820;
+  --bg3: #17212b;
+  --bg4: #213040;
+  --panel: rgba(18, 24, 32, 0.92);
+  --green: #22d3a0;
+  --green2: #16a76f;
+  --blue: #4f8ef7;
+  --violet: #8b5cf6;
+  --amber: #f7b44f;
+  --red: #f75f5f;
+  --cyan: #53d7ff;
+  --text: #edf2f7;
+  --text2: #9aa6ba;
+  --text3: #657287;
+  --border: rgba(255,255,255,0.08);
+  --border2: rgba(255,255,255,0.14);
+  --shadow: 0 18px 60px rgba(0,0,0,0.28);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --font-head: "Segoe UI", Inter, Arial, sans-serif;
+  --font-body: "Segoe UI", Inter, Arial, sans-serif;
+  --font-mono: "Consolas", "SFMono-Regular", monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(34,211,160,0.14), transparent 26%),
+    radial-gradient(circle at 88% 0%, rgba(79,142,247,0.14), transparent 26%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+.screen { display: none; min-height: 100vh; flex-direction: column; }
+.screen.active { display: flex; }
+.topnav {
+  height: 62px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(12,15,20,0.92);
+  backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+  font-weight: 850;
+  letter-spacing: -0.4px;
+  min-width: max-content;
+}
+.logo-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--green), var(--blue));
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 28px rgba(34,211,160,0.2);
+  color: #062016;
+  font-weight: 900;
+}
+.nav-links { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: var(--text2);
+  padding: 7px 13px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  transition: 0.16s ease;
+}
+.nav-btn:hover { color: var(--text); background: var(--bg3); }
+.nav-btn.active { color: var(--green); background: rgba(34,211,160,0.12); }
+.nav-right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border2);
+  background: rgba(255,255,255,0.04);
+  color: var(--text2);
+  font-size: 12px;
+  white-space: nowrap;
+}
+.pill.green { color: var(--green); background: rgba(34,211,160,0.1); border-color: rgba(34,211,160,0.24); }
+.pill.amber { color: var(--amber); background: rgba(247,180,79,0.1); border-color: rgba(247,180,79,0.24); }
+.pill.blue { color: var(--blue); background: rgba(79,142,247,0.1); border-color: rgba(79,142,247,0.24); }
+.pill.red { color: var(--red); background: rgba(247,95,95,0.1); border-color: rgba(247,95,95,0.24); }
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--green), var(--violet));
+  color: white;
+  font-weight: 850;
+}
+.page { width: 100%; max-width: 1220px; margin: 0 auto; padding: 30px 28px; flex: 1; }
+.page-wide { flex: 1; display: flex; min-height: calc(100vh - 62px); }
+.sidebar {
+  width: 230px;
+  border-right: 1px solid var(--border);
+  padding: 20px 0;
+  flex-shrink: 0;
+  background: rgba(12,15,20,0.3);
+}
+.sidebar-title {
+  padding: 10px 20px 8px;
+  color: var(--text3);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+}
+.side-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  color: var(--text2);
+  border-left: 2px solid transparent;
+  font-size: 13px;
+  transition: 0.15s ease;
+}
+.side-item:hover { color: var(--text); background: var(--bg3); }
+.side-item.active { color: var(--green); background: rgba(34,211,160,0.08); border-left-color: var(--green); }
+.side-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: var(--bg3);
+  color: var(--text2);
+  font-size: 12px;
+}
+.side-item.active .side-icon { background: rgba(34,211,160,0.14); color: var(--green); }
+.content { flex: 1; padding: 28px; min-width: 0; }
+.hero {
+  min-height: calc(100vh - 62px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+  gap: 28px;
+  align-items: center;
+}
+.eyebrow {
+  color: var(--green);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 850;
+  margin-bottom: 14px;
+}
+h1 {
+  font-size: clamp(42px, 7vw, 82px);
+  line-height: 0.95;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+.lead {
+  color: var(--text2);
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 640px;
+}
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 17px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  color: white;
+  background: var(--bg4);
+  transition: 0.16s ease;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+}
+.btn:hover { transform: translateY(-1px); filter: brightness(1.06); }
+.btn-primary { background: linear-gradient(135deg, var(--green2), var(--green)); color: #051d13; }
+.btn-blue { background: linear-gradient(135deg, var(--blue), var(--violet)); }
+.btn-ghost { background: rgba(255,255,255,0.04); color: var(--text2); border-color: var(--border2); }
+.btn-ghost:hover { color: var(--text); background: var(--bg3); }
+.btn-danger { background: rgba(247,95,95,0.12); color: var(--red); border-color: rgba(247,95,95,0.22); }
+.btn-sm { padding: 7px 12px; font-size: 12px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.16);
+}
+.card.compact { padding: 15px; }
+.card-title { font-weight: 850; font-size: 18px; margin-bottom: 8px; }
+.muted { color: var(--text2); }
+.small { font-size: 12px; color: var(--text3); }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+.sec-title { font-size: 28px; font-weight: 900; letter-spacing: -0.8px; margin-bottom: 8px; }
+.sec-sub { color: var(--text2); line-height: 1.6; max-width: 760px; }
+.metric {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+.metric-label { color: var(--text3); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 800; margin-bottom: 7px; }
+.metric-value { font-size: 30px; line-height: 1; font-weight: 900; letter-spacing: -1px; }
+.metric-note { color: var(--text2); font-size: 12px; margin-top: 8px; }
+.visual-shell {
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), transparent),
+    var(--bg2);
+  box-shadow: var(--shadow);
+}
+.app-window {
+  min-height: 520px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border2);
+  background: var(--bg);
+}
+.window-bar {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+}
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot.red { background: var(--red); }
+.dot.amber { background: var(--amber); }
+.dot.green { background: var(--green); }
+.demo-layout { display: grid; grid-template-columns: 170px 1fr; min-height: 478px; }
+.demo-menu { border-right: 1px solid var(--border); padding: 15px 10px; background: var(--bg2); }
+.demo-menu-item {
+  padding: 9px 10px;
+  border-radius: 8px;
+  color: var(--text2);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.demo-menu-item.active { color: var(--green); background: rgba(34,211,160,0.1); }
+.demo-main { padding: 18px; }
+.mission-card {
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  border-radius: var(--radius);
+  padding: 15px;
+  transition: 0.15s ease;
+}
+.mission-card:hover { border-color: var(--border2); transform: translateY(-1px); }
+.mission-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.mission-title { font-weight: 850; font-size: 15px; }
+.mission-desc { color: var(--text2); font-size: 13px; line-height: 1.55; margin-bottom: 13px; }
+.mission-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.progress-wrap { height: 7px; border-radius: 999px; background: var(--bg4); overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--green), var(--blue)); }
+.phone-row { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 14px; }
+.phone {
+  width: min(100%, 305px);
+  min-height: 580px;
+  border: 10px solid #06080b;
+  border-radius: 34px;
+  background: var(--bg2);
+  box-shadow: 0 28px 70px rgba(0,0,0,0.34);
+  overflow: hidden;
+  justify-self: center;
+}
+.phone-head {
+  padding: 16px 18px 10px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(34,211,160,0.14), rgba(79,142,247,0.08));
+}
+.phone-title { font-weight: 900; font-size: 18px; }
+.phone-body { padding: 14px; }
+.assistant-bubble {
+  background: rgba(34,211,160,0.1);
+  border: 1px solid rgba(34,211,160,0.22);
+  border-radius: 14px;
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.chat-list { display: flex; flex-direction: column; gap: 10px; max-height: 370px; overflow-y: auto; padding-right: 4px; }
+.chat-msg {
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  padding: 11px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.chat-msg.user { align-self: flex-end; background: rgba(79,142,247,0.12); border-color: rgba(79,142,247,0.24); max-width: 86%; }
+.chat-msg.bot { align-self: flex-start; max-width: 92%; }
+.input-row { display: flex; gap: 8px; margin-top: 12px; }
+.field, .select, .textarea {
+  width: 100%;
+  border: 1px solid var(--border2);
+  background: var(--bg3);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  outline: none;
+}
+.textarea { min-height: 88px; resize: vertical; line-height: 1.5; }
+.field:focus, .select:focus, .textarea:focus { border-color: rgba(34,211,160,0.5); }
+.label { display: block; font-size: 12px; color: var(--text2); margin-bottom: 7px; font-weight: 700; }
+.form-grid { display: grid; grid-template-columns: 1.1fr 0.8fr 0.7fr; gap: 10px; align-items: end; }
+.table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table th {
+  text-align: left;
+  color: var(--text3);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0 10px 10px;
+  border-bottom: 1px solid var(--border);
+}
+.table td {
+  padding: 12px 10px;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+.table tr:hover td { background: rgba(255,255,255,0.025); }
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+.status.ok { color: var(--green); background: rgba(34,211,160,0.1); }
+.status.wait { color: var(--amber); background: rgba(247,180,79,0.1); }
+.status.bad { color: var(--red); background: rgba(247,95,95,0.1); }
+.map-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.7fr);
+  gap: 16px;
+}
+.kg-map {
+  min-height: 470px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(rgba(79,142,247,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79,142,247,0.06) 1px, transparent 1px),
+    radial-gradient(circle at 25% 70%, rgba(34,211,160,0.18), transparent 26%),
+    radial-gradient(circle at 70% 30%, rgba(79,142,247,0.14), transparent 26%),
+    var(--bg2);
+  background-size: 42px 42px, 42px 42px, auto, auto, auto;
+  position: relative;
+  overflow: hidden;
+}
+.map-shape {
+  position: absolute;
+  inset: 68px 50px 60px;
+  clip-path: polygon(8% 49%, 18% 30%, 36% 33%, 45% 19%, 62% 25%, 73% 13%, 93% 29%, 85% 52%, 96% 70%, 73% 76%, 61% 68%, 45% 84%, 31% 72%, 15% 79%);
+  background: linear-gradient(135deg, rgba(34,211,160,0.16), rgba(79,142,247,0.13));
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.district {
+  position: absolute;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(12,15,20,0.74);
+  border-radius: 12px;
+  padding: 10px;
+  min-width: 130px;
+  transition: 0.15s ease;
+}
+.district:hover { transform: translateY(-2px); border-color: rgba(34,211,160,0.55); }
+.district.active { border-color: var(--green); box-shadow: 0 0 0 2px rgba(34,211,160,0.12); }
+.district b { display: block; font-size: 13px; margin-bottom: 4px; }
+.district span { color: var(--text2); font-size: 11px; }
+.d1 { left: 14%; top: 54%; }
+.d2 { left: 36%; top: 35%; }
+.d3 { left: 59%; top: 24%; }
+.d4 { left: 68%; top: 58%; }
+.d5 { left: 31%; top: 68%; }
+.reward-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.reward-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  min-height: 168px;
+  display: flex;
+  flex-direction: column;
+}
+.reward-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+.reward-logo.food { background: rgba(247,95,95,0.16); color: #ff9a9a; }
+.reward-logo.movie { background: rgba(79,142,247,0.16); color: #91bdff; }
+.reward-logo.book { background: rgba(247,180,79,0.16); color: #ffd082; }
+.reward-logo.sport { background: rgba(34,211,160,0.16); color: #8ff4d3; }
+.reward-logo.edu { background: rgba(139,92,246,0.16); color: #c4adff; }
+.reward-logo.cafe { background: rgba(83,215,255,0.16); color: #9eeaff; }
+.script-box {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 16px;
+}
+.script-nav {
+  position: sticky;
+  top: 90px;
+  align-self: start;
+}
+.script-step {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  color: var(--text2);
+  border-radius: 10px;
+  padding: 11px 12px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.script-step.active { color: var(--green); border-color: rgba(34,211,160,0.35); background: rgba(34,211,160,0.09); }
+.script-reader {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  min-height: 520px;
+}
+.script-reader h3 { font-size: 28px; margin-bottom: 14px; letter-spacing: -0.6px; }
+.script-reader p { color: var(--text2); line-height: 1.85; font-size: 18px; margin-bottom: 16px; }
+.quote {
+  border-left: 3px solid var(--green);
+  background: rgba(34,211,160,0.08);
+  padding: 16px 18px;
+  border-radius: 0 12px 12px 0;
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 18px 0;
+}
+.toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  border-radius: var(--radius);
+  padding: 12px 15px;
+  box-shadow: var(--shadow);
+  display: none;
+  max-width: 340px;
+}
+.toast.show { display: block; animation: pop 0.18s ease; }
+@keyframes pop { from { transform: translateY(6px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.68);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 90;
+}
+.modal-backdrop.show { display: flex; }
+.modal {
+  width: min(620px, 100%);
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+.upload-zone {
+  border: 1px dashed rgba(34,211,160,0.42);
+  background: rgba(34,211,160,0.06);
+  border-radius: var(--radius);
+  padding: 18px;
+  text-align: center;
+  color: var(--text2);
+  margin: 14px 0;
+}
+.preview-box {
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  border-radius: var(--radius);
+  min-height: 140px;
+  display: grid;
+  place-items: center;
+  color: var(--text3);
+  margin: 12px 0;
+  overflow: hidden;
+}
+.preview-box img { width: 100%; max-height: 280px; object-fit: cover; display: block; }
+.compare-list { display: grid; gap: 10px; margin-top: 10px; }
+.compare-row { display: flex; gap: 10px; align-items: flex-start; color: var(--text2); font-size: 13px; line-height: 1.5; }
+.check {
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: rgba(34,211,160,0.12);
+  color: var(--green);
+  font-weight: 900;
+}
+.story-card {
+  background: linear-gradient(135deg, rgba(34,211,160,0.12), rgba(79,142,247,0.08));
+  border: 1px solid rgba(34,211,160,0.18);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.stage-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 16px; }
+.stage {
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  min-height: 122px;
+}
+.stage-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: rgba(34,211,160,0.12);
+  color: var(--green);
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.stage b { display: block; font-size: 13px; margin-bottom: 5px; }
+.stage span { color: var(--text2); font-size: 12px; line-height: 1.45; }
+@media (max-width: 1050px) {
+  .hero, .phone-row, .map-wrap, .script-box { grid-template-columns: 1fr; }
+  .grid4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid3, .reward-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stage-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .script-nav { position: static; }
+}
+@media (max-width: 760px) {
+  .topnav { height: auto; min-height: 62px; padding: 12px 16px; align-items: flex-start; flex-direction: column; }
+  .nav-right { margin-left: 0; }
+  .page, .content { padding: 18px; }
+  .page-wide { flex-direction: column; }
+  .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+  .demo-layout { grid-template-columns: 1fr; }
+  .demo-menu { display: none; }
+  .grid2, .grid3, .grid4, .reward-grid, .form-grid, .stage-list { grid-template-columns: 1fr; }
+  h1 { font-size: 44px; }
+  .section-head { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<div class="toast" id="toast"></div>
+
+<div class="modal-backdrop" id="submit-modal">
+  <div class="modal">
+    <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start">
+      <div>
+        <div class="card-title" id="modal-title">Отправить задание</div>
+        <div class="muted" id="modal-sub">AI проверит фото и голосовой ответ</div>
+      </div>
+      <button class="btn btn-ghost btn-sm" onclick="closeModal()">Закрыть</button>
+    </div>
+    <div class="upload-zone">
+      <b>Фото или голосовой ответ</b><br>
+      <span>Для показа можно выбрать файл. AI-демо оценит результат и даст текстовый ответ.</span>
+      <input id="photo-input" type="file" accept="image/*" style="display:none" onchange="previewFile(event)">
+      <div style="margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-primary btn-sm" onclick="document.getElementById('photo-input').click()">Выбрать фото</button>
+        <button class="btn btn-ghost btn-sm" onclick="fakeVoice()">Записать голос</button>
+      </div>
+    </div>
+    <div class="preview-box" id="preview-box">Предпросмотр появится здесь</div>
+    <label class="label">Что ребёнок сказал AI</label>
+    <textarea class="textarea" id="child-answer">Я полил цветы, потому что без воды растения засохнут.</textarea>
+    <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:14px;flex-wrap:wrap">
+      <button class="btn btn-ghost" onclick="closeModal()">Отмена</button>
+      <button class="btn btn-blue" onclick="aiReviewSubmission()">AI проверить</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen active" id="screen-home">
+  <nav class="topnav">
+    <div class="logo"><div class="logo-mark">GL</div>GreenLearnAI</div>
+    <div class="nav-links">
+      <button class="nav-btn active" onclick="showScreen('home')">Главная</button>
+      <button class="nav-btn" onclick="showScreen('child')">Ребёнок</button>
+      <button class="nav-btn" onclick="showScreen('parent')">Родитель</button>
+      <button class="nav-btn" onclick="showScreen('school')">Школа</button>
+      <button class="nav-btn" onclick="showScreen('map')">Эко-карта</button>
+      <button class="nav-btn" onclick="showScreen('rewards')">Награды</button>
+      <button class="nav-btn" onclick="showScreen('script')">Текст</button>
+    </div>
+    <div class="nav-right">
+      <span class="pill green"><span id="gp-top">1 240</span> GP</span>
+      <button class="avatar">A</button>
+    </div>
+  </nav>
+  <main class="page hero">
+    <section>
+      <div class="eyebrow">AI-платформа для школ, семей и страны</div>
+      <h1>Учись, делай добро, меняй мир.</h1>
+      <p class="lead">
+        GreenLearnAI превращает обучение, экологию и добрые дела в игру с реальными наградами.
+        Ребёнок выполняет задания в реальном мире, AI помогает объяснить действие, а родители и школы видят результат.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="showScreen('child')">Открыть детское приложение</button>
+        <button class="btn btn-blue" onclick="showScreen('parent')">Панель родителя</button>
+        <button class="btn btn-ghost" onclick="showScreen('script')">Текст для выступления</button>
+      </div>
+      <div class="stage-list">
+        <div class="stage"><div class="stage-num">1</div><b>Задание</b><span>AI или взрослый даёт миссию: экология, речь, память, доброе дело.</span></div>
+        <div class="stage"><div class="stage-num">2</div><b>Действие</b><span>Ребёнок выходит из телефона и делает полезное дело в реальном мире.</span></div>
+        <div class="stage"><div class="stage-num">3</div><b>Фото/голос</b><span>Ребёнок отправляет доказательство и объясняет, почему это важно.</span></div>
+        <div class="stage"><div class="stage-num">4</div><b>AI-проверка</b><span>AI анализирует ответ, помогает сформулировать мысль и ставит статус.</span></div>
+        <div class="stage"><div class="stage-num">5</div><b>Награда</b><span>GreenPoints обмениваются на купоны, билеты, скидки и семейные бонусы.</span></div>
+      </div>
+    </section>
+    <aside class="visual-shell">
+      <div class="app-window">
+        <div class="window-bar"><span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span><span class="small">greenlearn.ai/demo</span></div>
+        <div class="demo-layout">
+          <div class="demo-menu">
+            <div class="demo-menu-item active">Обзор страны</div>
+            <div class="demo-menu-item">Школы</div>
+            <div class="demo-menu-item">Классы</div>
+            <div class="demo-menu-item">Эко-миссии</div>
+            <div class="demo-menu-item">Награды</div>
+          </div>
+          <div class="demo-main">
+            <div class="grid3">
+              <div class="metric"><div class="metric-label">Школы</div><div class="metric-value">128</div><div class="metric-note">участвуют в пилоте</div></div>
+              <div class="metric"><div class="metric-label">Дети</div><div class="metric-value">24K</div><div class="metric-note">выполняют миссии</div></div>
+              <div class="metric"><div class="metric-label">GreenPoints</div><div class="metric-value">2.8M</div><div class="metric-note">выдано за дела</div></div>
+            </div>
+            <div class="story-card" style="margin-top:14px">
+              <div class="card-title">Кыргызстан через 10 лет</div>
+              <p class="muted" style="line-height:1.7">Каждая школа отвечает за свой район, каждый класс следит за своей улицей, а каждый ребёнок понимает: посадить дерево, убрать мусор или помочь родителям - это вклад в будущее страны.</p>
+            </div>
+            <div class="grid2" style="margin-top:14px">
+              <div class="mission-card"><div class="mission-title">Очищено территорий</div><div class="metric-value" style="font-size:26px;margin-top:10px">416</div><div class="progress-wrap" style="margin-top:14px"><div class="progress-fill" style="width:76%"></div></div></div>
+              <div class="mission-card"><div class="mission-title">Посажено деревьев</div><div class="metric-value" style="font-size:26px;margin-top:10px">9 830</div><div class="progress-wrap" style="margin-top:14px"><div class="progress-fill" style="width:64%"></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+</div>
+
+<div class="screen" id="screen-child">
+  <nav class="topnav">
+    <div class="logo"><div class="logo-mark">GL</div>GreenLearnAI</div>
+    <div class="nav-links">
+      <button class="nav-btn" onclick="showScreen('home')">Главная</button>
+      <button class="nav-btn active" onclick="showScreen('child')">Ребёнок</button>
+      <button class="nav-btn" onclick="showScreen('parent')">Родитель</button>
+      <button class="nav-btn" onclick="showScreen('school')">Школа</button>
+      <button class="nav-btn" onclick="showScreen('map')">Эко-карта</button>
+      <button class="nav-btn" onclick="showScreen('rewards')">Награды</button>
+      <button class="nav-btn" onclick="showScreen('script')">Текст</button>
+    </div>
+    <div class="nav-right"><span class="pill green"><span id="gp-child">1 240</span> GP</span><button class="avatar">A</button></div>
+  </nav>
+  <div class="page-wide">
+    <aside class="sidebar">
+      <div class="sidebar-title">Детское приложение</div>
+      <div class="side-item active"><div class="side-icon">AI</div>AI-наставник</div>
+      <div class="side-item"><div class="side-icon">GP</div>Мои баллы</div>
+      <div class="side-item"><div class="side-icon">OK</div>Добрые дела</div>
+      <div class="side-item"><div class="side-icon">SP</div>Речь и память</div>
+    </aside>
+    <main class="content">
+      <div class="section-head">
+        <div>
+          <div class="sec-title">Детское приложение</div>
+          <p class="sec-sub">AI говорит с ребёнком, даёт задания, просит объяснить свои действия и помогает строить длинные предложения.</p>
+        </div>
+        <button class="btn btn-ghost" onclick="speakText('Привет! Сегодня твоя миссия: полей цветы и расскажи, почему растениям нужна вода.')">Озвучить AI</button>
+      </div>
+      <div class="phone-row">
+        <div class="phone">
+          <div class="phone-head">
+            <div class="phone-title">Привет, Айгерим</div>
+            <div class="small">Сегодня 3 миссии и 90 GreenPoints</div>
+          </div>
+          <div class="phone-body">
+            <div class="assistant-bubble">
+              Я помогу тебе сделать доброе дело и красиво объяснить, зачем оно нужно.
+            </div>
+            <div class="grid2" style="grid-template-columns:1fr 1fr;margin:14px 0">
+              <div class="metric"><div class="metric-label">Стрик</div><div class="metric-value">7</div><div class="metric-note">дней подряд</div></div>
+              <div class="metric"><div class="metric-label">Речь</div><div class="metric-value">82%</div><div class="metric-note">ответ полный</div></div>
+            </div>
+            <div id="child-task-list" style="display:grid;gap:10px"></div>
+          </div>
+        </div>
+        <div>
+          <div class="grid3" style="margin-bottom:14px">
+            <div class="metric"><div class="metric-label">Память</div><div class="metric-value">+18%</div><div class="metric-note">через пересказы AI</div></div>
+            <div class="metric"><div class="metric-label">Экран</div><div class="metric-value">-42 мин</div><div class="metric-note">заменено делами</div></div>
+            <div class="metric"><div class="metric-label">Речь</div><div class="metric-value">312</div><div class="metric-note">предложений за месяц</div></div>
+          </div>
+          <div class="card">
+            <div class="card-title">AI помогает сформулировать мысль</div>
+            <div class="chat-list" id="ai-chat">
+              <div class="chat-msg bot">Привет! Расскажи, какое доброе дело ты сделал сегодня?</div>
+              <div class="chat-msg user">Я полил цветы.</div>
+              <div class="chat-msg bot">Отлично. Теперь скажи причину: почему растениям нужна вода?</div>
+              <div class="chat-msg bot"><b>Красивый ответ:</b> Я полил цветы, потому что без воды растения засохнут, а с водой они растут и делают двор красивее.</div>
+            </div>
+            <div class="input-row">
+              <input class="field" id="ai-input" placeholder="Напиши ответ ребёнка..." onkeydown="if(event.key==='Enter')sendAI()">
+              <button class="btn btn-primary" onclick="sendAI()">Отправить</button>
+            </div>
+          </div>
+          <div class="card" style="margin-top:14px">
+            <div class="card-title">Что решает детское приложение</div>
+            <div class="compare-list">
+              <div class="compare-row"><div class="check">1</div><div>Ребёнок выходит из телефона и делает реальное полезное дело.</div></div>
+              <div class="compare-row"><div class="check">2</div><div>AI развивает речь: ребёнок объясняет причину, следствие и результат.</div></div>
+              <div class="compare-row"><div class="check">3</div><div>Фото или голосовой ответ проходят проверку, а баллы начисляются только за выполненное задание.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div class="screen" id="screen-parent">
+  <nav class="topnav">
+    <div class="logo"><div class="logo-mark">GL</div>GreenLearnAI</div>
+    <div class="nav-links">
+      <button class="nav-btn" onclick="showScreen('home')">Главная</button>
+      <button class="nav-btn" onclick="showScreen('child')">Ребёнок</button>
+      <button class="nav-btn active" onclick="showScreen('parent')">Родитель</button>
+      <button class="nav-btn" onclick="showScreen('school')">Школа</button>
+      <button class="nav-btn" onclick="showScreen('map')">Эко-карта</button>
+      <button class="nav-btn" onclick="showScreen('rewards')">Награды</button>
+      <button class="nav-btn" onclick="showScreen('script')">Текст</button>
+    </div>
+    <div class="nav-right"><span class="pill amber">Семейный баланс: <span id="gp-parent">1 240</span> GP</span><button class="avatar">R</button></div>
+  </nav>
+  <div class="page-wide">
+    <aside class="sidebar">
+      <div class="sidebar-title">Родитель</div>
+      <div class="side-item active"><div class="side-icon">GP</div>GreenPoints</div>
+      <div class="side-item"><div class="side-icon">+</div>Создать миссию</div>
+      <div class="side-item"><div class="side-icon">AI</div>AI-аналитика</div>
+      <div class="side-item"><div class="side-icon">PR</div>Прогресс ребёнка</div>
+    </aside>
+    <main class="content">
+      <div class="section-head">
+        <div>
+          <div class="sec-title">Панель родителя</div>
+          <p class="sec-sub">Родитель покупает GreenPoints и ставит условия: зарядка, книга, помощь дома, час без телефона или семейная миссия.</p>
+        </div>
+        <button class="btn btn-primary" onclick="buyPoints()">Купить 500 GP</button>
+      </div>
+      <div class="grid4" style="margin-bottom:14px">
+        <div class="metric"><div class="metric-label">Баланс</div><div class="metric-value"><span id="gp-metric">1 240</span></div><div class="metric-note">GreenPoints</div></div>
+        <div class="metric"><div class="metric-label">Домашние миссии</div><div class="metric-value">18</div><div class="metric-note">в этом месяце</div></div>
+        <div class="metric"><div class="metric-label">Без телефона</div><div class="metric-value">9 ч</div><div class="metric-note">заменено активностью</div></div>
+        <div class="metric"><div class="metric-label">Речь</div><div class="metric-value">+31%</div><div class="metric-note">полные ответы AI</div></div>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <div class="card-title">Создать семейную миссию</div>
+          <div class="form-grid" style="grid-template-columns:1fr 100px 130px">
+            <div>
+              <label class="label">Условие</label>
+              <input class="field" id="parent-task-title" value="Один час без телефона">
+            </div>
+            <div>
+              <label class="label">Баллы</label>
+              <input class="field" id="parent-task-points" type="number" value="50">
+            </div>
+            <button class="btn btn-primary" onclick="addParentMission()">Добавить</button>
+          </div>
+          <div id="parent-missions" style="display:grid;gap:10px;margin-top:16px"></div>
+        </div>
+        <div class="card">
+          <div class="card-title">AI-вывод для родителя</div>
+          <div class="assistant-bubble" style="margin-bottom:12px">
+            Айгерим лучше выполняет задания, где нужно объяснить результат. Рекомендуется давать задания с коротким голосовым ответом: "что сделал", "почему это важно", "кому помог".
+          </div>
+          <table class="table">
+            <tr><th>Задание</th><th>Статус</th><th>GP</th></tr>
+            <tr><td>Сделай зарядку</td><td><span class="status ok">Одобрено</span></td><td>20</td></tr>
+            <tr><td>Прочитай и перескажи</td><td><span class="status wait">AI проверяет</span></td><td>30</td></tr>
+            <tr><td>Помоги родителям</td><td><span class="status ok">Одобрено</span></td><td>25</td></tr>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div class="screen" id="screen-school">
+  <nav class="topnav">
+    <div class="logo"><div class="logo-mark">GL</div>GreenLearnAI</div>
+    <div class="nav-links">
+      <button class="nav-btn" onclick="showScreen('home')">Главная</button>
+      <button class="nav-btn" onclick="showScreen('child')">Ребёнок</button>
+      <button class="nav-btn" onclick="showScreen('parent')">Родитель</button>
+      <button class="nav-btn active" onclick="showScreen('school')">Школа</button>
+      <button class="nav-btn" onclick="showScreen('map')">Эко-карта</button>
+      <button class="nav-btn" onclick="showScreen('rewards')">Награды</button>
+      <button class="nav-btn" onclick="showScreen('script')">Текст</button>
+    </div>
+    <div class="nav-right"><span class="pill blue">Школа N12</span><button class="avatar">S</button></div>
+  </nav>
+  <div class="page-wide">
+    <aside class="sidebar">
+      <div class="sidebar-title">Школа / ВУЗ</div>
+      <div class="side-item active"><div class="side-icon">CL</div>Классы</div>
+      <div class="side-item"><div class="side-icon">MS</div>Миссии</div>
+      <div class="side-item"><div class="side-icon">AN</div>Аналитика</div>
+      <div class="side-item"><div class="side-icon">PK</div>Пакеты GP</div>
+    </aside>
+    <main class="content">
+      <div class="section-head">
+        <div>
+          <div class="sec-title">Цифровая система мотивации для школ</div>
+          <p class="sec-sub">Школа покупает GreenPoints каждый месяц, распределяет между классами и ставит задания: субботник, макулатура, помощь на мероприятии, неделя без опозданий.</p>
+        </div>
+        <button class="btn btn-primary" onclick="schoolBuyPackage()">Купить пакет 10 000 GP</button>
+      </div>
+      <div class="grid3" style="margin-bottom:14px">
+        <div class="metric"><div class="metric-label">Школьный баланс</div><div class="metric-value" id="school-gp">38 000</div><div class="metric-note">GreenPoints</div></div>
+        <div class="metric"><div class="metric-label">Классы</div><div class="metric-value">24</div><div class="metric-note">получили миссии</div></div>
+        <div class="metric"><div class="metric-label">Район</div><div class="metric-value">71%</div><div class="metric-note">территории под заботой</div></div>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <div class="card-title">Создать школьную миссию</div>
+          <div class="form-grid">
+            <div>
+              <label class="label">Миссия</label>
+              <input class="field" id="school-mission-title" value="Сдать макулатуру">
+            </div>
+            <div>
+              <label class="label">Класс</label>
+              <select class="select" id="school-mission-class"><option>7-Б</option><option>6-А</option><option>9-В</option></select>
+            </div>
+            <div>
+              <label class="label">GP</label>
+              <input class="field" id="school-mission-points" type="number" value="70">
+            </div>
+          </div>
+          <button class="btn btn-primary" style="width:100%;margin-top:12px" onclick="addSchoolMission()">Поставить задание классу</button>
+          <div id="school-missions" style="display:grid;gap:10px;margin-top:16px"></div>
+        </div>
+        <div class="card">
+          <div class="card-title">Рейтинг классов</div>
+          <table class="table">
+            <tr><th>Класс</th><th>Территория</th><th>Дела</th><th>GP</th></tr>
+            <tr><td>7-Б</td><td>Улица Токтогула</td><td>46</td><td>5 240</td></tr>
+            <tr><td>6-А</td><td>Двор школы</td><td>38</td><td>4 870</td></tr>
+            <tr><td>9-В</td><td>Парк рядом</td><td>31</td><td>4 120</td></tr>
+            <tr><td>8-Г</td><td>Река Ала-Арча</td><td>27</td><td>3 880</td></tr>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div class="screen" id="screen-map">
+  <nav class="topnav">
+    <div class="logo"><div class="logo-mark">GL</div>GreenLearnAI</div>
+    <div class="nav-links">
+      <button class="nav-btn" onclick="showScreen('home')">Главная</button>
+      <button class="nav-btn" onclick="showScreen('child')">Ребёнок</button>
+      <button class="nav-btn" onclick="showScreen('parent')">Родитель</button>
+      <button class="nav-btn" onclick="showScreen('school')">Школа</button>
+      <button class="nav-btn active" onclick="showScreen('map')">Эко-карта</button>
+      <button class="nav-btn" onclick="showScreen('rewards')">Награды</button>
+      <button class="nav-btn" onclick="showScreen('script')">Текст</button>
+    </div>
+    <div class="nav-right"><span class="pill green">Эко-карта Кыргызстана</span><button class="avatar">K</button></div>
+  </nav>
+  <main class="page">
+    <div class="section-head">
+      <div>
+        <div class="sec-title">Эко-карта Кыргызстана</div>
+        <p class="sec-sub">Каждая школа отвечает за свою территорию: двор, улицу, парк или район вокруг школы. Всё видно на общей карте страны.</p>
+      </div>
+      <button class="btn btn-ghost" onclick="refreshMap()">Обновить карту</button>
+    </div>
+    <div class="map-wrap">
+      <div class="kg-map">
+        <div class="map-shape"></div>
+        <button class="district d1 active" onclick="selectDistrict(this,'Бишкек','128 школ, 24 000 детей, 416 очищенных территорий')"><b>Бишкек</b><span>416 дел</span></button>
+        <button class="district d2" onclick="selectDistrict(this,'Чуй','82 школы, посадка деревьев и очистка парков')"><b>Чуй</b><span>298 дел</span></button>
+        <button class="district d3" onclick="selectDistrict(this,'Иссык-Куль','Очистка берегов, туристические эко-миссии')"><b>Иссык-Куль</b><span>185 дел</span></button>
+        <button class="district d4" onclick="selectDistrict(this,'Ош','Школьные улицы, субботники, волонтёрство')"><b>Ош</b><span>331 дело</span></button>
+        <button class="district d5" onclick="selectDistrict(this,'Нарын','Реки, горные тропы, посадка деревьев')"><b>Нарын</b><span>142 дела</span></button>
+      </div>
+      <aside class="card">
+        <div class="card-title" id="district-title">Бишкек</div>
+        <p class="muted" id="district-desc" style="line-height:1.7">128 школ, 24 000 детей, 416 очищенных территорий</p>
+        <div class="grid2" style="grid-template-columns:1fr 1fr;margin-top:16px">
+          <div class="metric"><div class="metric-label">Деревья</div><div class="metric-value">9 830</div></div>
+          <div class="metric"><div class="metric-label">Мусор</div><div class="metric-value">31 т</div></div>
+        </div>
+        <div class="compare-list">
+          <div class="compare-row"><div class="check">1</div><div>Одна школа очищает свой участок.</div></div>
+          <div class="compare-row"><div class="check">2</div><div>Другая школа сажает деревья.</div></div>
+          <div class="compare-row"><div class="check">3</div><div>Третья следит за чистотой рядом с рекой.</div></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<div class="screen" id="screen-rewards">
+  <nav class="topnav">
+    <div class="logo"><div class="logo-mark">GL</div>GreenLearnAI</div>
+    <div class="nav-links">
+      <button class="nav-btn" onclick="showScreen('home')">Главная</button>
+      <button class="nav-btn" onclick="showScreen('child')">Ребёнок</button>
+      <button class="nav-btn" onclick="showScreen('parent')">Родитель</button>
+      <button class="nav-btn" onclick="showScreen('school')">Школа</button>
+      <button class="nav-btn" onclick="showScreen('map')">Эко-карта</button>
+      <button class="nav-btn active" onclick="showScreen('rewards')">Награды</button>
+      <button class="nav-btn" onclick="showScreen('script')">Текст</button>
+    </div>
+    <div class="nav-right"><span class="pill green"><span id="gp-rewards">1 240</span> GP</span><button class="avatar">G</button></div>
+  </nav>
+  <main class="page">
+    <div class="section-head">
+      <div>
+        <div class="sec-title">Реальные награды и монетизация</div>
+        <p class="sec-sub">GreenPoints можно обменять на купоны, билеты, скидки и образовательные бонусы. Бренды получают рекламу, школы - мотивацию, родители - инструмент воспитания.</p>
+      </div>
+      <button class="btn btn-blue" onclick="showScreen('business')">Показать бизнес-модель</button>
+    </div>
+    <div class="reward-grid" id="reward-grid"></div>
+  </main>
+</div>
+
+<div class="screen" id="screen-business">
+  <nav class="topnav">
+    <div class="logo"><div class="logo-mark">GL</div>GreenLearnAI</div>
+    <div class="nav-links">
+      <button class="nav-btn" onclick="showScreen('rewards')">Назад к наградам</button>
+      <button class="nav-btn active">Бизнес-модель</button>
+      <button class="nav-btn" onclick="showScreen('script')">Текст</button>
+    </div>
+    <div class="nav-right"><span class="pill amber">4 источника дохода</span><button class="avatar">B</button></div>
+  </nav>
+  <main class="page">
+    <div class="section-head">
+      <div>
+        <div class="sec-title">Почему проект монетизируем</div>
+        <p class="sec-sub">В системе есть родители, школы, ВУЗы и бренды, которым выгодно платить за мотивацию, аналитику, социальный имидж и привлечение клиентов.</p>
+      </div>
+    </div>
+    <div class="grid4">
+      <div class="card"><span class="pill green">1</span><div class="card-title" style="margin-top:14px">Родители</div><p class="muted" style="line-height:1.65">Покупают GreenPoints для домашних заданий и семейных миссий.</p></div>
+      <div class="card"><span class="pill blue">2</span><div class="card-title" style="margin-top:14px">Школы и ВУЗы</div><p class="muted" style="line-height:1.65">Покупают пакеты баллов и распределяют их между классами и студентами.</p></div>
+      <div class="card"><span class="pill amber">3</span><div class="card-title" style="margin-top:14px">Бренды</div><p class="muted" style="line-height:1.65">Платят за партнёрские миссии, купоны и рекламу внутри полезной системы.</p></div>
+      <div class="card"><span class="pill red">4</span><div class="card-title" style="margin-top:14px">Premium</div><p class="muted" style="line-height:1.65">Расширенная аналитика для родителей и образовательных организаций.</p></div>
+    </div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="card">
+        <div class="card-title">Кому что даёт GreenLearnAI</div>
+        <div class="compare-list">
+          <div class="compare-row"><div class="check">Д</div><div><b>Дети</b> получают развитие, привычки, речь и награды.</div></div>
+          <div class="compare-row"><div class="check">Р</div><div><b>Родители</b> получают инструмент воспитания без давления.</div></div>
+          <div class="compare-row"><div class="check">Ш</div><div><b>Школы</b> получают мотивацию учеников и понятную аналитику.</div></div>
+          <div class="compare-row"><div class="check">Б</div><div><b>Бренды</b> получают новых клиентов и социальный имидж.</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Позиционирование</div>
+        <table class="table">
+          <tr><th>Критерий</th><th>Ответ</th></tr>
+          <tr><td>Актуален</td><td>Дети уже живут в телефонах.</td></tr>
+          <tr><td>Полезен</td><td>Экранное время превращается в реальные действия.</td></tr>
+          <tr><td>Необходим</td><td>Экология и воспитание - проблема сегодняшнего дня.</td></tr>
+          <tr><td>Монетизируем</td><td>Платят семьи, школы, ВУЗы и бренды.</td></tr>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="screen" id="screen-script">
+  <nav class="topnav">
+    <div class="logo"><div class="logo-mark">GL</div>GreenLearnAI</div>
+    <div class="nav-links">
+      <button class="nav-btn" onclick="showScreen('home')">Главная</button>
+      <button class="nav-btn" onclick="showScreen('child')">Ребёнок</button>
+      <button class="nav-btn" onclick="showScreen('parent')">Родитель</button>
+      <button class="nav-btn" onclick="showScreen('school')">Школа</button>
+      <button class="nav-btn" onclick="showScreen('map')">Эко-карта</button>
+      <button class="nav-btn" onclick="showScreen('rewards')">Награды</button>
+      <button class="nav-btn active" onclick="showScreen('script')">Текст</button>
+    </div>
+    <div class="nav-right"><button class="btn btn-ghost btn-sm" onclick="speakCurrentScript()">Озвучить блок</button></div>
+  </nav>
+  <main class="page">
+    <div class="section-head">
+      <div>
+        <div class="sec-title">Текст для выступления</div>
+        <p class="sec-sub">Открой этот экран во время презентации: слева части выступления, справа текст крупно и удобно для рассказа.</p>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-ghost" onclick="prevScript()">Назад</button>
+        <button class="btn btn-primary" onclick="nextScript()">Дальше</button>
+      </div>
+    </div>
+    <div class="script-box">
+      <aside class="script-nav" id="script-nav"></aside>
+      <section class="script-reader" id="script-reader"></section>
+    </div>
+  </main>
+</div>
+
+<script>
+const state = {
+  gp: 1240,
+  currentMission: "Полей цветы",
+  selectedFileName: "",
+  scriptIndex: 0,
+  schoolGp: 38000
+};
+
+const childTasks = [
+  { title: "Полей цветы", desc: "Сделай фото и расскажи, почему растениям нужна вода.", points: 30, status: "wait" },
+  { title: "Собери мусор", desc: "Убери маленький участок во дворе и объясни, почему нельзя мусорить.", points: 50, status: "open" },
+  { title: "Помоги родителям", desc: "Сделай доброе дело дома и запиши короткий голосовой ответ.", points: 25, status: "ok" }
+];
+
+const parentMissions = [
+  { title: "Сделай зарядку", points: 20, status: "Активно" },
+  { title: "Прочитай книгу и перескажи AI", points: 30, status: "Активно" },
+  { title: "Один час без телефона", points: 50, status: "Сегодня" }
+];
+
+const schoolMissions = [
+  { title: "Участие в субботнике", klass: "7-Б", points: 50 },
+  { title: "Помочь в школьном мероприятии", klass: "9-В", points: 100 }
+];
+
+const rewards = [
+  { brand: "KFC", title: "Купон на комбо", cost: 450, type: "food" },
+  { brand: "Cinema", title: "Билет в кино", cost: 600, type: "movie" },
+  { brand: "Book", title: "Скидка в книжном", cost: 300, type: "book" },
+  { brand: "Sport", title: "Тренировка в спортзале", cost: 700, type: "sport" },
+  { brand: "Edu", title: "Скидка на курс", cost: 850, type: "edu" },
+  { brand: "Cafe", title: "Напиток в кафе", cost: 250, type: "cafe" }
+];
+
+const scriptBlocks = [
+  {
+    title: "1. Будущее Кыргызстана",
+    body: [
+      "Представьте Кыргызстан через 10 лет.",
+      "Каждая школа отвечает за свой район. Каждый класс следит за своей улицей. Каждый ребёнок знает: если я посажу дерево, уберу мусор, помогу родителям или сделаю доброе дело - это не просто мелочь. Это мой вклад в будущее страны.",
+      "А теперь представьте, что всё это работает не на словах, а через технологию."
+    ]
+  },
+  {
+    title: "2. Что такое GreenLearnAI",
+    body: [
+      "Наш проект называется GreenLearnAI.",
+      "GreenLearnAI - это AI-платформа, которая превращает обучение, экологию и добрые дела в игру с реальными наградами."
+    ]
+  },
+  {
+    title: "3. Проблемы детей",
+    body: [
+      "Сегодня у детей есть несколько больших проблем. Они всё раньше становятся зависимыми от телефона.",
+      "У многих снижается концентрация, память, творческое мышление. Некоторым детям сложно говорить, выражать мысли, строить длинные предложения.",
+      "И самое главное - дети часто не чувствуют личную ответственность за окружающий мир."
+    ]
+  },
+  {
+    title: "4. AI-ассистент",
+    body: [
+      "Мы решили объединить эти проблемы в одну систему.",
+      "В центре GreenLearnAI находится AI-ассистент. Для маленьких детей это добрый персонаж, который говорит с ребёнком голосом, даёт задания, просит рассказать историю, повторить слова, объяснить свои действия.",
+      "Например, ребёнок получает задание: Полей цветы и расскажи, почему растениям нужна вода."
+    ]
+  },
+  {
+    title: "5. Как ребёнок выполняет задание",
+    body: [
+      "Он выполняет задание, загружает фото или голосовой ответ, а AI помогает ему сформулировать мысль:",
+      "Я полил цветы, потому что без воды растения засохнут.",
+      "В этот момент мы решаем сразу несколько задач: ребёнок говорит, думает, объясняет причину и следствие, делает полезное дело и выходит из телефона в реальный мир."
+    ]
+  },
+  {
+    title: "6. Подростки и родители",
+    body: [
+      "Для подростков GreenLearnAI становится наставником. Он даёт эко-челленджи, задания на творчество, волонтёрство, развитие памяти, лидерства и ответственности.",
+      "Для родителей - это панель контроля. Родитель может купить GreenPoints и сам поставить условия: сделай зарядку - получи 20 баллов. Прочитай книгу и перескажи AI - получи 30 баллов. Один час без телефона - получи 50 баллов."
+    ]
+  },
+  {
+    title: "7. Школы и ВУЗы",
+    body: [
+      "Для школ и ВУЗов GreenLearnAI становится цифровой системой мотивации.",
+      "Школа каждый месяц покупает GreenPoints и распределяет их между классами. Классный руководитель ставит задания: участие в субботнике, сдать макулатуру, помочь в школьном мероприятии, неделя без опозданий."
+    ]
+  },
+  {
+    title: "8. Эко-карта",
+    body: [
+      "Теперь представьте, если каждая школа Кыргызстана будет отвечать за свою территорию: двор, улицу, парк, район вокруг школы.",
+      "Одна школа очищает свой участок. Другая школа сажает деревья. Третья следит за чистотой рядом с рекой. И всё это видно на эко-карте Кыргызстана.",
+      "Это уже не просто приложение. Это национальная система воспитания экологичного поколения."
+    ]
+  },
+  {
+    title: "9. Награды и выгода",
+    body: [
+      "За выполненные задания дети получают GreenPoints. Эти баллы можно обменять на реальные награды: купоны от KFC, билеты в кино, скидки в книжных магазинах, кафе, спортзалах, образовательных центрах.",
+      "Бренды получают рекламу, новых клиентов и сильный социальный имидж. Школы получают мотивацию учеников и понятную аналитику. Родители получают инструмент воспитания. Дети получают развитие, привычки и награды. А страна получает поколение, которое не загрязняет, а восстанавливает."
+    ]
+  },
+  {
+    title: "10. Монетизация",
+    body: [
+      "Наша монетизация состоит из нескольких направлений.",
+      "Первое - родители покупают GreenPoints для домашних заданий и семейных миссий. Второе - школы и ВУЗы покупают пакеты баллов для учеников и студентов. Третье - бренды платят за партнёрские миссии и купоны. Четвёртое - Premium-подписка для родителей и образовательных организаций с расширенной аналитикой."
+    ]
+  },
+  {
+    title: "11. Почему сейчас",
+    body: [
+      "GreenLearnAI актуален, потому что дети уже живут в телефонах. Полезен, потому что превращает экранное время в реальные действия. Необходим, потому что экология и воспитание - это не проблема будущего. Это проблема сегодняшнего дня.",
+      "И монетизируем, потому что в системе есть родители, школы, ВУЗы и бренды, которым это выгодно."
+    ]
+  },
+  {
+    title: "12. Финал",
+    body: [
+      "Наша главная идея простая: мы не просто даём детям приложение. Мы даём им причину стать лучше.",
+      "GreenLearnAI - учись, делай добро, меняй мир.",
+      "И если сегодня мы начнём со школ Бишкека, завтра это может стать движением всего Кыргызстана.",
+      "Потому что чистая страна начинается не с законов. Она начинается с ребёнка, который однажды понял:"
+    ],
+    quote: "Я тоже отвечаю за этот мир."
+  }
+];
+
+function showScreen(name) {
+  document.querySelectorAll(".screen").forEach(screen => screen.classList.remove("active"));
+  const next = document.getElementById("screen-" + name);
+  if (next) next.classList.add("active");
+  window.scrollTo(0, 0);
+}
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(showToast.timer);
+  showToast.timer = setTimeout(() => toast.classList.remove("show"), 2600);
+}
+
+function formatGp(value) {
+  return String(value).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
+function updateGp() {
+  ["gp-top", "gp-child", "gp-parent", "gp-metric", "gp-rewards"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = formatGp(state.gp);
+  });
+}
+
+function renderChildTasks() {
+  const list = document.getElementById("child-task-list");
+  if (!list) return;
+  list.innerHTML = childTasks.map((task, index) => {
+    const status = task.status === "ok" ? '<span class="status ok">Одобрено</span>' : task.status === "wait" ? '<span class="status wait">AI проверка</span>' : '<span class="status wait">Открыто</span>';
+    return `
+      <div class="mission-card">
+        <div class="mission-top">
+          <div>
+            <div class="mission-title">${task.title}</div>
+            <div class="mission-desc">${task.desc}</div>
+          </div>
+          ${status}
+        </div>
+        <div class="mission-foot">
+          <span class="pill green">+${task.points} GP</span>
+          <button class="btn btn-primary btn-sm" onclick="openSubmission(${index})">Отправить</button>
+        </div>
+      </div>`;
+  }).join("");
+}
+
+function openSubmission(index) {
+  const task = childTasks[index];
+  state.currentMission = task.title;
+  state.selectedFileName = "";
+  document.getElementById("modal-title").textContent = "Отправить: " + task.title;
+  document.getElementById("modal-sub").textContent = task.desc;
+  document.getElementById("preview-box").innerHTML = "Предпросмотр появится здесь";
+  document.getElementById("submit-modal").classList.add("show");
+}
+
+function closeModal() {
+  document.getElementById("submit-modal").classList.remove("show");
+}
+
+function previewFile(event) {
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+  state.selectedFileName = file.name.toLowerCase();
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    document.getElementById("preview-box").innerHTML = `<img src="${e.target.result}" alt="Фото задания">`;
+  };
+  reader.readAsDataURL(file);
+}
+
+function fakeVoice() {
+  document.getElementById("child-answer").value = "Я сделал задание и хочу объяснить, почему это важно для людей и природы.";
+  showToast("Голосовой ответ записан для демо");
+}
+
+function aiReviewSubmission() {
+  const answer = document.getElementById("child-answer").value.toLowerCase();
+  const name = state.selectedFileName;
+  const mission = state.currentMission.toLowerCase();
+  const flowerOk = mission.includes("цвет") && (answer.includes("вода") || answer.includes("раст")) && (name.includes("flower") || name.includes("plant") || name.includes("garden") || name === "");
+  const trashOk = mission.includes("мусор") && (answer.includes("мусор") || answer.includes("чист")) && (name.includes("trash") || name.includes("clean") || name === "");
+  const helpOk = mission.includes("родител") && answer.length > 25;
+  const approved = flowerOk || trashOk || helpOk;
+  const list = document.getElementById("ai-chat");
+  if (approved) {
+    state.gp += 30;
+    updateGp();
+    showToast("AI одобрил задание и начислил GreenPoints");
+    list.insertAdjacentHTML("beforeend", `<div class="chat-msg bot"><b>AI проверка:</b> фото и ответ подходят к заданию "${state.currentMission}". Задание одобрено, баллы начислены.</div>`);
+  } else {
+    showToast("AI отклонил фото и указал причину");
+    list.insertAdjacentHTML("beforeend", `<div class="chat-msg bot"><b>AI проверка:</b> фото или ответ не подходят к заданию "${state.currentMission}". Нужно отправить другой снимок, где лучше видно результат задания, и объяснить причину действия.</div>`);
+  }
+  closeModal();
+}
+
+function sendAI() {
+  const input = document.getElementById("ai-input");
+  const chat = document.getElementById("ai-chat");
+  const value = input.value.trim();
+  if (!value) return;
+  chat.insertAdjacentHTML("beforeend", `<div class="chat-msg user">${escapeHtml(value)}</div>`);
+  input.value = "";
+  const reply = buildAiReply(value);
+  setTimeout(() => {
+    chat.insertAdjacentHTML("beforeend", `<div class="chat-msg bot">${reply}</div>`);
+    chat.scrollTop = chat.scrollHeight;
+  }, 260);
+}
+
+function buildAiReply(value) {
+  const v = value.toLowerCase();
+  if (v.includes("мусор")) return "<b>Красивый ответ:</b> Я убрал мусор, потому что чистая улица безопаснее для людей, животных и природы.";
+  if (v.includes("цвет") || v.includes("раст")) return "<b>Красивый ответ:</b> Я полил растения, потому что вода помогает им расти и делать наш двор красивее.";
+  if (v.includes("родител")) return "<b>Красивый ответ:</b> Я помог родителям, потому что семья становится сильнее, когда мы заботимся друг о друге.";
+  return "<b>AI подсказка:</b> Попробуй ответить по формуле: что я сделал, почему это важно, кому это помогло.";
+}
+
+function speakText(text) {
+  if (!("speechSynthesis" in window)) {
+    showToast("В этом браузере голос недоступен");
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "ru-RU";
+  utterance.rate = 0.94;
+  utterance.pitch = 1.08;
+  const voices = window.speechSynthesis.getVoices();
+  const voice = voices.find(v => v.lang && v.lang.toLowerCase().startsWith("ru")) || voices[0];
+  if (voice) utterance.voice = voice;
+  window.speechSynthesis.speak(utterance);
+}
+
+function buyPoints() {
+  state.gp += 500;
+  updateGp();
+  showToast("Родитель купил 500 GreenPoints");
+}
+
+function renderParentMissions() {
+  const box = document.getElementById("parent-missions");
+  if (!box) return;
+  box.innerHTML = parentMissions.map(m => `
+    <div class="mission-card">
+      <div class="mission-foot">
+        <div><div class="mission-title">${escapeHtml(m.title)}</div><div class="small">${m.status}</div></div>
+        <span class="pill green">+${m.points} GP</span>
+      </div>
+    </div>`).join("");
+}
+
+function addParentMission() {
+  const title = document.getElementById("parent-task-title").value.trim();
+  const points = Number(document.getElementById("parent-task-points").value || 0);
+  if (!title || points <= 0) {
+    showToast("Напиши условие и баллы");
+    return;
+  }
+  parentMissions.unshift({ title, points, status: "Новое" });
+  renderParentMissions();
+  showToast("Семейная миссия добавлена");
+}
+
+function schoolBuyPackage() {
+  state.schoolGp += 10000;
+  document.getElementById("school-gp").textContent = formatGp(state.schoolGp);
+  showToast("Школа купила пакет 10 000 GP");
+}
+
+function renderSchoolMissions() {
+  const box = document.getElementById("school-missions");
+  if (!box) return;
+  box.innerHTML = schoolMissions.map(m => `
+    <div class="mission-card">
+      <div class="mission-foot">
+        <div><div class="mission-title">${escapeHtml(m.title)}</div><div class="small">Класс: ${escapeHtml(m.klass)}</div></div>
+        <span class="pill blue">${m.points} GP</span>
+      </div>
+    </div>`).join("");
+}
+
+function addSchoolMission() {
+  const title = document.getElementById("school-mission-title").value.trim();
+  const klass = document.getElementById("school-mission-class").value;
+  const points = Number(document.getElementById("school-mission-points").value || 0);
+  if (!title || points <= 0) {
+    showToast("Заполни миссию и баллы");
+    return;
+  }
+  schoolMissions.unshift({ title, klass, points });
+  state.schoolGp = Math.max(0, state.schoolGp - points);
+  document.getElementById("school-gp").textContent = formatGp(state.schoolGp);
+  renderSchoolMissions();
+  showToast("Миссия отправлена классу");
+}
+
+function selectDistrict(el, title, desc) {
+  document.querySelectorAll(".district").forEach(d => d.classList.remove("active"));
+  el.classList.add("active");
+  document.getElementById("district-title").textContent = title;
+  document.getElementById("district-desc").textContent = desc;
+}
+
+function refreshMap() {
+  showToast("Эко-карта обновлена: новые школьные миссии добавлены");
+}
+
+function renderRewards() {
+  const grid = document.getElementById("reward-grid");
+  if (!grid) return;
+  grid.innerHTML = rewards.map(reward => `
+    <div class="reward-card">
+      <div class="reward-logo ${reward.type}">${reward.brand.slice(0, 2)}</div>
+      <div class="mission-title">${reward.title}</div>
+      <p class="muted" style="font-size:13px;line-height:1.6;margin:9px 0 14px">Партнёрская награда за реальные полезные действия.</p>
+      <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px">
+        <span class="pill amber">${reward.cost} GP</span>
+        <button class="btn btn-primary btn-sm" onclick="redeemReward(${reward.cost}, '${reward.title.replace(/'/g, "\\'")}')">Обменять</button>
+      </div>
+    </div>`).join("");
+}
+
+function redeemReward(cost, title) {
+  if (state.gp < cost) {
+    showToast("Недостаточно GreenPoints для награды");
+    return;
+  }
+  state.gp -= cost;
+  updateGp();
+  showToast("Награда получена: " + title);
+}
+
+function renderScript() {
+  const nav = document.getElementById("script-nav");
+  const reader = document.getElementById("script-reader");
+  if (!nav || !reader) return;
+  nav.innerHTML = scriptBlocks.map((block, index) =>
+    `<button class="script-step ${index === state.scriptIndex ? "active" : ""}" onclick="setScript(${index})">${block.title}</button>`
+  ).join("");
+  const block = scriptBlocks[state.scriptIndex];
+  reader.innerHTML = `
+    <h3>${block.title}</h3>
+    ${block.body.map(p => `<p>${escapeHtml(p)}</p>`).join("")}
+    ${block.quote ? `<div class="quote">${escapeHtml(block.quote)}</div>` : ""}
+    <div style="display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:26px;flex-wrap:wrap">
+      <span class="pill green">${state.scriptIndex + 1} / ${scriptBlocks.length}</span>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-ghost btn-sm" onclick="prevScript()">Назад</button>
+        <button class="btn btn-primary btn-sm" onclick="nextScript()">Дальше</button>
+      </div>
+    </div>`;
+}
+
+function setScript(index) {
+  state.scriptIndex = index;
+  renderScript();
+}
+
+function nextScript() {
+  state.scriptIndex = Math.min(scriptBlocks.length - 1, state.scriptIndex + 1);
+  renderScript();
+}
+
+function prevScript() {
+  state.scriptIndex = Math.max(0, state.scriptIndex - 1);
+  renderScript();
+}
+
+function speakCurrentScript() {
+  const block = scriptBlocks[state.scriptIndex];
+  speakText(block.body.join(" ") + " " + (block.quote || ""));
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+document.addEventListener("keydown", event => {
+  if (!document.getElementById("screen-script").classList.contains("active")) return;
+  if (event.key === "ArrowRight" || event.key === " ") nextScript();
+  if (event.key === "ArrowLeft") prevScript();
+});
+
+renderChildTasks();
+renderParentMissions();
+renderSchoolMissions();
+renderRewards();
+renderScript();
+updateGp();
+</script>
+</body>
+</html>

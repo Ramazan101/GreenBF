@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenLearnAI</title>
+</head>
+<body style="margin:0; padding:0; background:#f0fdf4; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif; color:#0f172a;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f0fdf4; padding:32px 0;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:480px; background:#ffffff; border-radius:16px; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,0.06);">
+          <tr>
+            <td style="background:#16a34a; padding:24px 32px; text-align:center;">
+              <span style="font-size:22px; font-weight:800; color:#ffffff;">🌿 GreenLearnAI</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:32px;">
+              <p style="font-size:16px; margin:0 0 16px;">Здравствуйте!</p>
+              <p style="font-size:16px; line-height:1.6; margin:0 0 24px;">
+                <strong>{{ child_name }}</strong> хочет подключить вас к своему аккаунту в GreenLearnAI,
+                чтобы вы могли давать задания, начислять баллы и следить за достижениями.
+              </p>
+
+              <p style="font-size:14px; color:#64748b; margin:0 0 8px;">Код подключения:</p>
+              <div style="font-size:32px; font-weight:800; letter-spacing:8px; color:#14532d; background:#dcfce7; border-radius:12px; padding:16px; text-align:center; margin-bottom:28px;">
+                {{ connection_code }}
+              </div>
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center">
+                    <a href="{{ connect_url }}" style="display:inline-block; background:#16a34a; color:#ffffff; text-decoration:none; font-size:16px; font-weight:600; padding:14px 32px; border-radius:10px;">
+                      Подключиться
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="font-size:13px; color:#64748b; line-height:1.6; margin:28px 0 0;">
+                Или войдите в приложение, нажмите «Подключить ребёнка» и введите код вручную.
+                Если вы не ожидали это письмо — просто проигнорируйте его.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:20px 32px; background:#f8fafc; text-align:center; font-size:12px; color:#94a3b8;">
+              Команда GreenLearnAI
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
